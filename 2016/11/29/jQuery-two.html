@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jQuery-two | 等待！！！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jQuery 基础课程—jQuery操作DOMjQuery 操作样式css 操作（很重要）
+功能：设置或者修改样式，操作的是 style 属性。
+
+
+设置单个样式
+
+12345// name:需要设置的样式名称// value:对应的样式值css(name,value);//使用案例$(&quot;#one&quot;).css(&quot;background&quot;,&quot;gray&quot;); //将背景修改为灰色
+
+设置多个样式
+
+1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery-two">
+<meta property="og:url" content="http://www.ccyyao.top/2016/11/29/jQuery-two.html">
+<meta property="og:site_name" content="等待！！！">
+<meta property="og:description" content="jQuery 基础课程—jQuery操作DOMjQuery 操作样式css 操作（很重要）
+功能：设置或者修改样式，操作的是 style 属性。
+
+
+设置单个样式
+
+12345// name:需要设置的样式名称// value:对应的样式值css(name,value);//使用案例$(&quot;#one&quot;).css(&quot;background&quot;,&quot;gray&quot;); //将背景修改为灰色
+
+设置多个样式
+
+1">
+<meta property="og:updated_time" content="2016-11-29T13:54:02.710Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery-two">
+<meta name="twitter:description" content="jQuery 基础课程—jQuery操作DOMjQuery 操作样式css 操作（很重要）
+功能：设置或者修改样式，操作的是 style 属性。
+
+
+设置单个样式
+
+12345// name:需要设置的样式名称// value:对应的样式值css(name,value);//使用案例$(&quot;#one&quot;).css(&quot;background&quot;,&quot;gray&quot;); //将背景修改为灰色
+
+设置多个样式
+
+1">
+  
+    <link rel="alternative" href="/atom.xml" title="等待！！！" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">YY</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/categories">我的分类</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                            <li><a href="/about">关于我哟</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1030706805@qq.com" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yaoyao810810" title="github">github</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                                <a class="fl QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1030706805&site=qq&menu=yes" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.ihoey.com/">梦魇小栈</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">YY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">YY</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/categories">我的分类</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                    <li><a href="/about">关于我哟</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1030706805@qq.com" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yaoyao810810" title="github">github</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                        <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1030706805&site=qq&menu=yes" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-jQuery-two" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/29/jQuery-two.html" class="article-date">
+      <time datetime="2016-11-29T11:09:47.000Z" itemprop="datePublished">2016-11-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery-two
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<h1 id="jQuery-基础课程—jQuery操作DOM"><a href="#jQuery-基础课程—jQuery操作DOM" class="headerlink" title="jQuery 基础课程—jQuery操作DOM"></a>jQuery 基础课程—jQuery操作DOM</h1><h2 id="jQuery-操作样式"><a href="#jQuery-操作样式" class="headerlink" title="jQuery 操作样式"></a>jQuery 操作样式</h2><h3 id="css-操作（很重要）"><a href="#css-操作（很重要）" class="headerlink" title="css 操作（很重要）"></a>css 操作（很重要）</h3><ul>
+<li>功能：设置或者修改样式，操作的是 style 属性。</li>
+</ul>
+<ul>
+<li>设置单个样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name:需要设置的样式名称</span></div><div class="line"><span class="comment">// value:对应的样式值</span></div><div class="line">css(name,value);</div><div class="line"><span class="comment">//使用案例</span></div><div class="line">$(<span class="string">"#one"</span>).css(<span class="string">"background"</span>,<span class="string">"gray"</span>); <span class="comment">//将背景修改为灰色</span></div></pre></td></tr></table></figure>
+<ul>
+<li>设置多个样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 参数是一个对象，对象中包含了需要设置的样式名和样式值</span></div><div class="line">css(obj);</div><div class="line"><span class="comment">//使用案例</span></div><div class="line">$(<span class="string">"#one"</span>).css(&#123;</div><div class="line">    <span class="string">"background"</span>:<span class="string">"gray"</span>,</div><div class="line">    <span class="string">"width"</span>:<span class="string">"400px"</span>,</div><div class="line">    <span class="string">"height"</span>:<span class="string">"200px"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>获取样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name:需要获取的样式名称</span></div><div class="line">css(name);</div><div class="line"><span class="comment">//案例</span></div><div class="line">$(<span class="string">"div"</span>).css(<span class="string">"background-color"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>注意：获取样式操作只会返回第一个元素对应的样式值</li>
+</ul>
+<h3 id="class-操作"><a href="#class-操作" class="headerlink" title="class 操作"></a>class 操作</h3><ul>
+<li>添加样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name: 需要添加的样式类名，注意参数不要带点</span></div><div class="line">addClass(name);</div><div class="line"><span class="comment">// 例子，给所有的div添加one的样式</span></div><div class="line">$(<span class="string">"div"</span>).addClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>移出所有的样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 不带参数，移出所有的样式类</span></div><div class="line">removeClass();</div><div class="line"><span class="comment">//例子，移出 div 所有的样式类</span></div><div class="line">$(<span class="string">"div"</span>).removeClass();</div></pre></td></tr></table></figure>
+<ul>
+<li>移出单个样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name 需要移出的样式类名</span></div><div class="line">removeClass(<span class="string">"name"</span>);</div><div class="line"><span class="comment">//例子，移出div 中 one 的样式类名</span></div><div class="line">$(<span class="string">"div"</span>).removeClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>判断是否有样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name: 用于判断的样式类名，返回值为 true false</span></div><div class="line">hasClass(neme);</div><div class="line"><span class="comment">// 例子，判断第一个 div 是否有 one 的样式类</span></div><div class="line">$(<span class="string">"div"</span>).hasClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>切换样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name: 需要切换的样式类名，如果有，移出该样式，如果没有，添加该样式</span></div><div class="line">toggleClass(name);</div><div class="line"><span class="comment">//例如</span></div><div class="line">$(<span class="string">"div"</span>).toggleClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>经验总结：<ul>
+<li>如果操作到的样式非常少，可以考虑 css 方法</li>
+<li>如果从操作到的样式非常多，那么可以通过class方法来操作，将样式写到一个 class 类里面；</li>
+<li>如果考虑到后期维护方便，将 css 从 js 中分离出来，那么推荐使用 class 的方式来操作。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="jQuery-动画"><a href="#jQuery-动画" class="headerlink" title="jQuery 动画"></a>jQuery 动画</h2><p>通过下拉单引入动画。<br>jQuery 提供了三组动画，这些动画都是标准的、有规律的效果，jQuery 还提供了自定义动画的功能。</p>
+<h3 id="显示与隐藏"><a href="#显示与隐藏" class="headerlink" title="显示与隐藏"></a>显示与隐藏</h3><ul>
+<li>显示(show)与隐藏(hide)是一组动画：<ul>
+<li>show 方法详解：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">show([speed], [callback]);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line">	 <span class="number">1.</span>如果不传，就没有动画效果。</div><div class="line">	 <span class="number">2.</span>毫秒值(比如<span class="number">1000</span>),动画在<span class="number">1000</span>毫秒执行完成(推荐)</div><div class="line">   <span class="number">3.</span>固定字符串，slow(<span class="number">200</span>)、normal(<span class="number">400</span>)、fast(<span class="number">600</span>)，如果传其他字符串，则默认为normal。</div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>hide 方法详解：与 show 方法的用法完全一致。</p>
+</li>
+<li><p>show/hide：修改的是元素的 width height opacity</p>
+</li>
+</ul>
+<hr>
+<h2 id="滑入与滑出"><a href="#滑入与滑出" class="headerlink" title="滑入与滑出"></a>滑入与滑出</h2><p>滑入(slideUp)与滑出(slideDown)是一组动画，效果与卷帘门类似， slideDown/slideDown,使用方法与show/hide基本一致。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">slideUp(speed, callback);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line">	 <span class="number">1.</span>如果不传，默认为normal，注意区分show/hide。</div><div class="line">	 <span class="number">2.</span>毫秒值(比如<span class="number">1000</span>),动画在<span class="number">1000</span>毫秒执行完成(推荐)</div><div class="line">   <span class="number">3.</span>固定字符串，slow(<span class="number">200</span>)、normal(<span class="number">400</span>)、fast(<span class="number">600</span>)</div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div></pre></td></tr></table></figure>
+<ul>
+<li>滑入滑出切换</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(selector).slideToggle(speed,callback);</div><div class="line"><span class="comment">//如果是隐藏状态，那么执行slideDown操作，如果是显示状态，那么执行slideUp操作。</span></div></pre></td></tr></table></figure>
+<p>slideUp/slideDown:修改的是元素的 height </p>
+<hr>
+<h2 id="淡入与淡出"><a href="#淡入与淡出" class="headerlink" title="淡入与淡出"></a>淡入与淡出</h2><p>fadeIn/fadeOut使用方法与show/hide、slideDown/slideUp一致。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fadeIn(speed, callback);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line">	 <span class="number">1.</span>如果不传，默认是normal。</div><div class="line">	 <span class="number">2.</span>毫秒值(比如<span class="number">1000</span>),动画在<span class="number">1000</span>毫秒执行完成(推荐)</div><div class="line">   <span class="number">3.</span>固定字符串，slow(<span class="number">200</span>)、normal(<span class="number">400</span>)、fast(<span class="number">600</span>)</div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div></pre></td></tr></table></figure>
+<ul>
+<li>淡入淡出切换：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fadeToggle(speed, callback);</div><div class="line"><span class="comment">//如果当前元素处于隐藏状态，那么执行fadeIn操作，如果处于显示状态，那么执行fadeOut操作。</span></div></pre></td></tr></table></figure>
+<ul>
+<li>淡入淡出到某个值<ul>
+<li>与淡入淡出的区别：淡入淡出只能控制元素的不透明度从 完全不透明 到完全透明；而fadeTo可以指定元素不透明度的具体值。并且时间参数是必需的！</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fadeTo(speed, value, callback)<span class="comment">//可以设置具体的透明度</span></div><div class="line"><span class="comment">//speed（必须）</span></div><div class="line"><span class="comment">//value  0-1之间的数值(比如0.4)，表示淡到某一个值。</span></div><div class="line"><span class="comment">//callback(可选) 回调函数</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="动画小总结"><a href="#动画小总结" class="headerlink" title="动画小总结"></a>动画小总结</h2><ul>
+<li>jQuery给我们提供了三组动画，show/hide、slideUp/slideDown、fadeIn/fadeOut</li>
+<li>动画切换方法：slideToggle、fadeToggle，注意：show和hide没有切换的方法。</li>
+<li>淡入淡出到某个值：fadeTo方法。</li>
+<li>show/slideDown/fadeIn三个是显示效果、hide/slideUp/fadeOut三个是隐藏效果。</li>
+<li>show/hide修改的是元素的height,width,opacity。slide系列方法修改的是元素的height。fade系列方法修改的是元素的opacity。这三种方法修改的这些值，都是带数字的，因为带了数字才能做渐变。</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/11/29/jQuery-two.html">jQuery-two</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YY 的个人博客">YY</a></p>
+        <p><span>发布时间:</span>2016年11月29日 - 19时09分</p>
+        <p><span>最后更新:</span>2016年11月29日 - 21时54分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/11/29/jQuery-two.html" title="jQuery-two">http://www.ccyyao.top/2016/11/29/jQuery-two.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.ccyyao.top/2016/11/29/jQuery-two.html　　作者: YY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/28/jQuery-one.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery-基础课程—jQuery操作DOM"><span class="toc-number">1.</span> <span class="toc-text">jQuery 基础课程—jQuery操作DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-操作样式"><span class="toc-number">1.1.</span> <span class="toc-text">jQuery 操作样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css-操作（很重要）"><span class="toc-number">1.1.1.</span> <span class="toc-text">css 操作（很重要）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class-操作"><span class="toc-number">1.1.2.</span> <span class="toc-text">class 操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-动画"><span class="toc-number">1.2.</span> <span class="toc-text">jQuery 动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#显示与隐藏"><span class="toc-number">1.2.1.</span> <span class="toc-text">显示与隐藏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滑入与滑出"><span class="toc-number">1.3.</span> <span class="toc-text">滑入与滑出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#淡入与淡出"><span class="toc-number">1.4.</span> <span class="toc-text">淡入与淡出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画小总结"><span class="toc-number">1.5.</span> <span class="toc-text">动画小总结</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/11/29/jQuery-two.html" data-title="jQuery-two" data-url="http://www.ccyyao.top/2016/11/29/jQuery-two.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yyao"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/11/28/jQuery-one.html" title="下一篇: jQuery">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/11/29/jQuery-two.html">jQuery-two</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/28/jQuery-one.html">jQuery</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/markdown-1.html">Markdown 使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/20/javascript-advamud.html">JavaScript高级知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/about_themes.html">关于主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/hello-world.html">Hello World</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 YY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >我站访客数量: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

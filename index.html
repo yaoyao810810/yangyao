@@ -146,7 +146,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a>
+                        <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a>
                     </div>
                 </section>
                 
@@ -224,10 +224,163 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-jQuery" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-jQuery-two" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/11/28/jQuery.html" class="article-date">
+      <a href="/2016/11/29/jQuery-two.html" class="article-date">
+      <time datetime="2016-11-29T11:09:47.000Z" itemprop="datePublished">2016-11-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/29/jQuery-two.html">jQuery-two</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<h1 id="jQuery-基础课程—jQuery操作DOM"><a href="#jQuery-基础课程—jQuery操作DOM" class="headerlink" title="jQuery 基础课程—jQuery操作DOM"></a>jQuery 基础课程—jQuery操作DOM</h1><h2 id="jQuery-操作样式"><a href="#jQuery-操作样式" class="headerlink" title="jQuery 操作样式"></a>jQuery 操作样式</h2><h3 id="css-操作（很重要）"><a href="#css-操作（很重要）" class="headerlink" title="css 操作（很重要）"></a>css 操作（很重要）</h3><ul>
+<li>功能：设置或者修改样式，操作的是 style 属性。</li>
+</ul>
+<ul>
+<li>设置单个样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name:需要设置的样式名称</span></div><div class="line"><span class="comment">// value:对应的样式值</span></div><div class="line">css(name,value);</div><div class="line"><span class="comment">//使用案例</span></div><div class="line">$(<span class="string">"#one"</span>).css(<span class="string">"background"</span>,<span class="string">"gray"</span>); <span class="comment">//将背景修改为灰色</span></div></pre></td></tr></table></figure>
+<ul>
+<li>设置多个样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 参数是一个对象，对象中包含了需要设置的样式名和样式值</span></div><div class="line">css(obj);</div><div class="line"><span class="comment">//使用案例</span></div><div class="line">$(<span class="string">"#one"</span>).css(&#123;</div><div class="line">    <span class="string">"background"</span>:<span class="string">"gray"</span>,</div><div class="line">    <span class="string">"width"</span>:<span class="string">"400px"</span>,</div><div class="line">    <span class="string">"height"</span>:<span class="string">"200px"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>获取样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name:需要获取的样式名称</span></div><div class="line">css(name);</div><div class="line"><span class="comment">//案例</span></div><div class="line">$(<span class="string">"div"</span>).css(<span class="string">"background-color"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>注意：获取样式操作只会返回第一个元素对应的样式值</li>
+</ul>
+<h3 id="class-操作"><a href="#class-操作" class="headerlink" title="class 操作"></a>class 操作</h3><ul>
+<li>添加样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name: 需要添加的样式类名，注意参数不要带点</span></div><div class="line">addClass(name);</div><div class="line"><span class="comment">// 例子，给所有的div添加one的样式</span></div><div class="line">$(<span class="string">"div"</span>).addClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>移出所有的样式</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 不带参数，移出所有的样式类</span></div><div class="line">removeClass();</div><div class="line"><span class="comment">//例子，移出 div 所有的样式类</span></div><div class="line">$(<span class="string">"div"</span>).removeClass();</div></pre></td></tr></table></figure>
+<ul>
+<li>移出单个样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name 需要移出的样式类名</span></div><div class="line">removeClass(<span class="string">"name"</span>);</div><div class="line"><span class="comment">//例子，移出div 中 one 的样式类名</span></div><div class="line">$(<span class="string">"div"</span>).removeClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>判断是否有样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name: 用于判断的样式类名，返回值为 true false</span></div><div class="line">hasClass(neme);</div><div class="line"><span class="comment">// 例子，判断第一个 div 是否有 one 的样式类</span></div><div class="line">$(<span class="string">"div"</span>).hasClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>切换样式类</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name: 需要切换的样式类名，如果有，移出该样式，如果没有，添加该样式</span></div><div class="line">toggleClass(name);</div><div class="line"><span class="comment">//例如</span></div><div class="line">$(<span class="string">"div"</span>).toggleClass(<span class="string">"one"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>经验总结：<ul>
+<li>如果操作到的样式非常少，可以考虑 css 方法</li>
+<li>如果从操作到的样式非常多，那么可以通过class方法来操作，将样式写到一个 class 类里面；</li>
+<li>如果考虑到后期维护方便，将 css 从 js 中分离出来，那么推荐使用 class 的方式来操作。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="jQuery-动画"><a href="#jQuery-动画" class="headerlink" title="jQuery 动画"></a>jQuery 动画</h2><p>通过下拉单引入动画。<br>jQuery 提供了三组动画，这些动画都是标准的、有规律的效果，jQuery 还提供了自定义动画的功能。</p>
+<h3 id="显示与隐藏"><a href="#显示与隐藏" class="headerlink" title="显示与隐藏"></a>显示与隐藏</h3><ul>
+<li>显示(show)与隐藏(hide)是一组动画：<ul>
+<li>show 方法详解：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">show([speed], [callback]);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line">	 <span class="number">1.</span>如果不传，就没有动画效果。</div><div class="line">	 <span class="number">2.</span>毫秒值(比如<span class="number">1000</span>),动画在<span class="number">1000</span>毫秒执行完成(推荐)</div><div class="line">   <span class="number">3.</span>固定字符串，slow(<span class="number">200</span>)、normal(<span class="number">400</span>)、fast(<span class="number">600</span>)，如果传其他字符串，则默认为normal。</div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>hide 方法详解：与 show 方法的用法完全一致。</p>
+</li>
+<li><p>show/hide：修改的是元素的 width height opacity</p>
+</li>
+</ul>
+<hr>
+<h2 id="滑入与滑出"><a href="#滑入与滑出" class="headerlink" title="滑入与滑出"></a>滑入与滑出</h2><p>滑入(slideUp)与滑出(slideDown)是一组动画，效果与卷帘门类似， slideDown/slideDown,使用方法与show/hide基本一致。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">slideUp(speed, callback);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line">	 <span class="number">1.</span>如果不传，默认为normal，注意区分show/hide。</div><div class="line">	 <span class="number">2.</span>毫秒值(比如<span class="number">1000</span>),动画在<span class="number">1000</span>毫秒执行完成(推荐)</div><div class="line">   <span class="number">3.</span>固定字符串，slow(<span class="number">200</span>)、normal(<span class="number">400</span>)、fast(<span class="number">600</span>)</div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div></pre></td></tr></table></figure>
+<ul>
+<li>滑入滑出切换</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(selector).slideToggle(speed,callback);</div><div class="line"><span class="comment">//如果是隐藏状态，那么执行slideDown操作，如果是显示状态，那么执行slideUp操作。</span></div></pre></td></tr></table></figure>
+<p>slideUp/slideDown:修改的是元素的 height </p>
+<hr>
+<h2 id="淡入与淡出"><a href="#淡入与淡出" class="headerlink" title="淡入与淡出"></a>淡入与淡出</h2><p>fadeIn/fadeOut使用方法与show/hide、slideDown/slideUp一致。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fadeIn(speed, callback);</div><div class="line"><span class="comment">//speed(可选)：动画的执行时间</span></div><div class="line">	 <span class="number">1.</span>如果不传，默认是normal。</div><div class="line">	 <span class="number">2.</span>毫秒值(比如<span class="number">1000</span>),动画在<span class="number">1000</span>毫秒执行完成(推荐)</div><div class="line">   <span class="number">3.</span>固定字符串，slow(<span class="number">200</span>)、normal(<span class="number">400</span>)、fast(<span class="number">600</span>)</div><div class="line"><span class="comment">//callback(可选):执行完动画后执行的回调函数</span></div></pre></td></tr></table></figure>
+<ul>
+<li>淡入淡出切换：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">fadeToggle(speed, callback);</div><div class="line"><span class="comment">//如果当前元素处于隐藏状态，那么执行fadeIn操作，如果处于显示状态，那么执行fadeOut操作。</span></div></pre></td></tr></table></figure>
+<ul>
+<li>淡入淡出到某个值<ul>
+<li>与淡入淡出的区别：淡入淡出只能控制元素的不透明度从 完全不透明 到完全透明；而fadeTo可以指定元素不透明度的具体值。并且时间参数是必需的！</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fadeTo(speed, value, callback)<span class="comment">//可以设置具体的透明度</span></div><div class="line"><span class="comment">//speed（必须）</span></div><div class="line"><span class="comment">//value  0-1之间的数值(比如0.4)，表示淡到某一个值。</span></div><div class="line"><span class="comment">//callback(可选) 回调函数</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="动画小总结"><a href="#动画小总结" class="headerlink" title="动画小总结"></a>动画小总结</h2><ul>
+<li>jQuery给我们提供了三组动画，show/hide、slideUp/slideDown、fadeIn/fadeOut</li>
+<li>动画切换方法：slideToggle、fadeToggle，注意：show和hide没有切换的方法。</li>
+<li>淡入淡出到某个值：fadeTo方法。</li>
+<li>show/slideDown/fadeIn三个是显示效果、hide/slideUp/fadeOut三个是隐藏效果。</li>
+<li>show/hide修改的是元素的height,width,opacity。slide系列方法修改的是元素的height。fade系列方法修改的是元素的opacity。这三种方法修改的这些值，都是带数字的，因为带了数字才能做渐变。</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-jQuery-one" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/28/jQuery-one.html" class="article-date">
       <time datetime="2016-11-28T06:45:57.000Z" itemprop="datePublished">2016-11-28</time>
 </a>
     </div>
@@ -241,7 +394,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/28/jQuery.html">jQuery</a>
+      <a class="article-title" href="/2016/11/28/jQuery-one.html">jQuery</a>
     </h1>
   
 
@@ -261,7 +414,7 @@
 <li>掌握jQuery的思想设计与理念</li>
 </ul>
 <hr>
-<h2 id="jQuery-基本概念"><a href="#jQuery-基本概念" class="headerlink" title="jQuery 基本概念"></a>jQuery 基本概念</h2><h3 id="为什么要学jQuery？"><a href="#为什么要学jQuery？" class="headerlink" title="为什么要学jQuery？"></a>为什么要学jQuery？</h3><p><img src="images/jsquedian.png" alt="js缺点总结"></p>
+<h2 id="jQuery-基本概念"><a href="#jQuery-基本概念" class="headerlink" title="jQuery 基本概念"></a>jQuery 基本概念</h2><h3 id="为什么要学jQuery？"><a href="#为什么要学jQuery？" class="headerlink" title="为什么要学jQuery？"></a>为什么要学jQuery？</h3><p><img src="http://www.ccyyao.top/images/jsquedian.png" alt="js缺点总结"></p>
 <h3 id="什么是jQuery？"><a href="#什么是jQuery？" class="headerlink" title="什么是jQuery？"></a>什么是jQuery？</h3><ul>
 <li>jquery 的官网： <a href="http://jquery.com" target="_blank" rel="external">http://jquery.com</a></li>
 <li>jQuery 就是一个js库，使用jQuery的话，会比使用JavaScript更简单。</li>
@@ -270,11 +423,11 @@
 <h3 id="jQuery-主要学什么？"><a href="#jQuery-主要学什么？" class="headerlink" title="jQuery 主要学什么？"></a>jQuery 主要学什么？</h3><ul>
 <li>学习jQuery 主要学习jQuery的一大堆 <code>api</code>。</li>
 <li><code>API:application programming interface</code>:应用程序编程接口，说白了API就是方法。</li>
-<li><code>obj.funName(params)</code>;<blockquote>
+<li><code>obj.funName(params)</code>;</li>
+</ul>
+<blockquote>
 <p>注意：方法调用的时候，都带小括号(),使用jQuery的方法的时候，不要忘了小括号。</p>
 </blockquote>
-</li>
-</ul>
 <h3 id="怎么使用jQuery？（重点）"><a href="#怎么使用jQuery？（重点）" class="headerlink" title="怎么使用jQuery？（重点）"></a>怎么使用jQuery？（重点）</h3><ul>
 <li><p>下载 jQuery  </p>
 <ul>
@@ -282,25 +435,113 @@
 </ul>
 </li>
 </ul>
-<p><img src="img/jQueryxiazaitu.png" alt="jquery下载图"></p>
+<p><img src="http://www.ccyyao.top/images/jQueryxiazaitu.png" alt="jquery下载图"></p>
 <ul>
 <li>使用jQuery实现div动态展示案例的步骤： <ul>
 <li>引包（引入jQuery文件） </li>
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"> &lt;script src=&quot;jquery-1.11.1.js&quot;&gt;&lt;/script&gt;</div><div class="line"></div><div class="line">```  </div><div class="line"></div><div class="line">+ 入口函数</div></pre></td></tr></table></figure>
-<p>$(document).ready(function () {<br>});</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">+ 功能实现  </div><div class="line"></div><div class="line">```js</div><div class="line">         $(&quot;#btnShowDiv&quot;).click(function () &#123;</div><div class="line">	     $(&quot;div&quot;).show(1000);</div><div class="line">         &#125;);</div><div class="line">```    </div><div class="line"></div><div class="line"></div><div class="line"> - div 动态展示案例中JavaScript 与 jquery 的对比  </div><div class="line"></div><div class="line"></div><div class="line">|    | JavaScript | jquery |</div><div class="line">| --- | --- | --- |</div><div class="line">| 入口函数 | 只能有一个，如果有多个，后面的会覆盖前面 | 可以有多个，并且不会发生覆盖的情况 |</div><div class="line">| 代码容错性 | 代码容错性差，代码出现错误，会影响到后面代码的运行。 | 代码容错性好，屏蔽错误，并且不会影响后面代码的运行。|</div><div class="line">| 浏览器兼容性 | 兼容性差，比如火狐不支持innerText | 对浏览器兼容性做了封装，因此不存在兼容性问题 |</div><div class="line">| 操作复杂性 | DOM操作复杂，对于一些简单的动画效果，实现起来比较麻烦 | DOM操作简单，支持隐式迭代，实现动画非常简单。 |</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## jQuery 详细解释</div><div class="line"></div><div class="line">### 版本介绍</div><div class="line"></div><div class="line">- 大版本分类</div><div class="line">    + jquery 大版本分为 1.X和2.X(3.0)  </div><div class="line"></div><div class="line">![版本图片](img/banben.png)  </div><div class="line"></div><div class="line">    + 区别：2.x版本不再支持IE6/7/8</div><div class="line"></div><div class="line">- 同一版本分类</div><div class="line">    + jquery.js：未压缩版本（开发版本），代码可读性高，推荐在开发和学习阶段使用，方便查看源代码。</div><div class="line">    + jquery.min.js：压缩版本，去除了注释、换行、空格、并且将一些变量替换成了a,b,c之类的简单字符，基本没有可读性，推荐在项目生产环境使用，因为文件较小，减少网络压力。</div><div class="line"></div><div class="line">- 关于 jquery3.0 </div><div class="line"></div><div class="line">![版本3.0](img/banbensan.png)  </div><div class="line"></div><div class="line">翻译：jquery3.0现在发布了，这个版本自从2014年10月就开始测试了，我们的目标是创建一个更苗条、更快的jquery版本（并且能向后兼容）。我们已经移除了IE旧版本的解决方案，并且带来了一些较为现代的web API，但这是有道理的。3.0是2.x分支的延续，但是有一些突破性的改变。但是1.12和2.2分支将会在同一时间继续获得关键性的支持补丁。但是他们不会再有任何新的功能和重大的修订。jQuery3是jQuery的未来，如果你需要兼容IE6-8，你可以继续使用1.12版本。</div><div class="line"></div><div class="line">### 引包的注意点</div><div class="line"></div><div class="line">- 忘记引包或者引包在入口函数的后面。 </div><div class="line"></div><div class="line">![引包错误图](img/yinbaocuowutu.png)</div><div class="line"></div><div class="line">- 引包路径错误（404） </div><div class="line"></div><div class="line">![引包路径错误](img/yinbaocuowutu.png)  </div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## 入口函数</div><div class="line"></div><div class="line">- jQUery 入口函数的两种写法</div><div class="line"></div><div class="line">```js</div><div class="line">//第一种写法</div><div class="line">$(document).ready(function() &#123;</div><div class="line">&#125;);</div><div class="line">//第二种写法</div><div class="line">$(function() &#123;</div><div class="line">	</div><div class="line">&#125;);</div><div class="line"></div><div class="line">```  </div><div class="line"></div><div class="line">## 对比JavaScript的入口函数jQuery的入口函数,执行时机  </div><div class="line"></div><div class="line">- JavaScript的入口函数要等到页面中所有资源（包括图片、文件）加载完成才开始执行。</div><div class="line">- jQuery的入口函数只会等待文档树加载完成就开始执行，并不会等待图片、文件的加载。</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## 了解jQuery的$符号</div><div class="line"></div><div class="line">### $是什么</div><div class="line"></div><div class="line">其实$就是一个函数：$();参数不一样，功能不一样</div><div class="line"></div><div class="line">- $常用的几种情况： </div><div class="line"></div><div class="line">```js</div><div class="line">$(function() &#123;&#125;);//参数是function，说明是入口函数</div><div class="line">$(“#btnSetConent”);//参数是字符串，并且以#开头，是一个标签选择，查找id=“btnSetContent”的元素</div><div class="line">$(“div”);//查找所有的div元素</div><div class="line">$(document).ready(funciton()&#123;&#125;)//将document转换成jQuery对象</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=<span class="string">"jquery-1.11.1.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>入口函数  </li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>功能实现  </li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#btnShowDiv"</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">$(<span class="string">"div"</span>).show(<span class="number">1000</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<ul>
+<li>div 动态展示案例中JavaScript 与 jquery 的对比  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>JavaScript</th>
+<th>jquery</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>入口函数</td>
+<td>只能有一个，如果有多个，后面的会覆盖前面</td>
+<td>可以有多个，并且不会发生覆盖的情况</td>
+</tr>
+<tr>
+<td>代码容错性</td>
+<td>代码容错性差，代码出现错误，会影响到后面代码的运行。</td>
+<td>代码容错性好，屏蔽错误，并且不会影响后面代码的运行。</td>
+</tr>
+<tr>
+<td>浏览器兼容性</td>
+<td>兼容性差，比如火狐不支持innerText</td>
+<td>对浏览器兼容性做了封装，因此不存在兼容性问题</td>
+</tr>
+<tr>
+<td>操作复杂性</td>
+<td>DOM操作复杂，对于一些简单的动画效果，实现起来比较麻烦</td>
+<td>DOM操作简单，支持隐式迭代，实现动画非常简单。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="jQuery-详细解释"><a href="#jQuery-详细解释" class="headerlink" title="jQuery 详细解释"></a>jQuery 详细解释</h2><h3 id="版本介绍"><a href="#版本介绍" class="headerlink" title="版本介绍"></a>版本介绍</h3><ul>
+<li>大版本分类</li>
+</ul>
+<ul>
+<li>jquery 大版本分为 1.X和2.X(3.0)  </li>
+</ul>
+<p><img src="http://www.ccyyao.top/images/banben.png" alt="版本图片">  </p>
+<ul>
+<li>区别：2.x版本不再支持IE6/7/8</li>
+</ul>
+<ul>
+<li><p>同一版本分类</p>
+<ul>
+<li>jquery.js：未压缩版本（开发版本），代码可读性高，推荐在开发和学习阶段使用，方便查看源代码。</li>
+<li>jquery.min.js：压缩版本，去除了注释、换行、空格、并且将一些变量替换成了a,b,c之类的简单字符，基本没有可读性，推荐在项目生产环境使用，因为文件较小，减少网络压力。</li>
+</ul>
+</li>
+<li><p>关于 jquery3.0 </p>
+</li>
+</ul>
+<p><img src="http://www.ccyyao.top/images/banbensan.png" alt="版本3.0">  </p>
+<p>翻译：jquery3.0现在发布了，这个版本自从2014年10月就开始测试了，我们的目标是创建一个更苗条、更快的jquery版本（并且能向后兼容）。我们已经移除了IE旧版本的解决方案，并且带来了一些较为现代的web API，但这是有道理的。3.0是2.x分支的延续，但是有一些突破性的改变。但是1.12和2.2分支将会在同一时间继续获得关键性的支持补丁。但是他们不会再有任何新的功能和重大的修订。jQuery3是jQuery的未来，如果你需要兼容IE6-8，你可以继续使用1.12版本。</p>
+<h3 id="引包的注意点"><a href="#引包的注意点" class="headerlink" title="引包的注意点"></a>引包的注意点</h3><ul>
+<li>忘记引包或者引包在入口函数的后面。 </li>
+</ul>
+<p><img src="http://www.ccyyao.top/images/yinbaocuowutu.png" alt="引包错误图"></p>
+<ul>
+<li>引包路径错误（404） </li>
+</ul>
+<p><img src="http://www.ccyyao.top/images/yinbaocuowutu.png" alt="引包路径错误">  </p>
+<hr>
+<h2 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h2><ul>
+<li>jQUery 入口函数的两种写法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一种写法</span></div><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">&#125;);</div><div class="line"><span class="comment">//第二种写法</span></div><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;	</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="对比JavaScript的入口函数jQuery的入口函数-执行时机"><a href="#对比JavaScript的入口函数jQuery的入口函数-执行时机" class="headerlink" title="对比JavaScript的入口函数jQuery的入口函数,执行时机"></a>对比JavaScript的入口函数jQuery的入口函数,执行时机</h2><ul>
+<li>JavaScript的入口函数要等到页面中所有资源（包括图片、文件）加载完成才开始执行。</li>
+<li>jQuery的入口函数只会等待文档树加载完成就开始执行，并不会等待图片、文件的加载。</li>
+</ul>
+<hr>
+<h2 id="了解jQuery的-符号"><a href="#了解jQuery的-符号" class="headerlink" title="了解jQuery的$符号"></a>了解jQuery的$符号</h2><h3 id="是什么"><a href="#是什么" class="headerlink" title="$是什么"></a>$是什么</h3><p>其实$就是一个函数：$();参数不一样，功能不一样</p>
+<ul>
+<li>$常用的几种情况:</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(function() &#123;&#125;);//参数是function，说明是入口函数</div><div class="line">$(“#btnSetConent”);//参数是字符串，并且以#开头，是一个标签选择，查找id=“btnSetContent”的元素</div><div class="line">$(“div”);//查找所有的div元素</div><div class="line">$(document).ready(funciton()&#123;&#125;)//将document转换成jQuery对象</div></pre></td></tr></table></figure>
 <p>补充<br>$ === jQuery,也就是说能用$的地方，完全可以用jQuery，$仅仅是简写形式。</p>
 <hr>
 <h2 id="1-3-5jQuery对象与DOM对象之间的转换（难点）"><a href="#1-3-5jQuery对象与DOM对象之间的转换（难点）" class="headerlink" title="1.3.5jQuery对象与DOM对象之间的转换（难点）"></a>1.3.5jQuery对象与DOM对象之间的转换（难点）</h2><h3 id="什么是DOM对象？"><a href="#什么是DOM对象？" class="headerlink" title="什么是DOM对象？"></a>什么是DOM对象？</h3><p>使用JavaScript中的方法获取页面中的元素返回的对象就是dom对象。比如使用document.getElement*系列的方法返回的就是dom对象。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(“btnShowDiv”);</div><div class="line"><span class="keyword">var</span> divs = <span class="built_in">document</span>.getElementsByTagName(“div”);</div></pre></td></tr></table></figure>
 <p>dom对象只可以使用dom对象的方法和属性  </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">domObject.innerHTML = “dom对象设置文本”;</div><div class="line">domObject.style.display= “block”;//dom对象显示对象</div><div class="line">domObject.onclick = function() &#123;&#125;//dom对象绑定事件</div><div class="line"></div><div class="line">``` </div><div class="line"></div><div class="line">### 什么是jquery对象？  </div><div class="line"></div><div class="line">jquery对象就是使用jquery的方法获取页面中的元素返回的对象就是jQuery对象。比如使用$()方法返回对象都是jquery对象。  </div><div class="line"></div><div class="line">```js</div><div class="line">$(“div”);//标签选择器返回的jquery对象。</div><div class="line">$(“#btnShowDiv”);//id选择器返回的jquery对象。</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">domObject.innerHTML = “dom对象设置文本”;</div><div class="line">domObject.style.display= “block”;<span class="comment">//dom对象显示对象</span></div><div class="line">domObject.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;<span class="comment">//dom对象绑定事件</span></div></pre></td></tr></table></figure>
+<h3 id="什么是jquery对象？"><a href="#什么是jquery对象？" class="headerlink" title="什么是jquery对象？"></a>什么是jquery对象？</h3><p>jquery对象就是使用jquery的方法获取页面中的元素返回的对象就是jQuery对象。比如使用$()方法返回对象都是jquery对象。  </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(“div”);//标签选择器返回的jquery对象。</div><div class="line">$(“#btnShowDiv”);//id选择器返回的jquery对象。</div></pre></td></tr></table></figure>
 <p>jquery对象只能使用jquery对象的方法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $obj = $(“div”);</div><div class="line">$obj.html(“jquery对象设置文本的方法”);</div><div class="line">$obj.show();<span class="comment">//jquery对象显示文本</span></div><div class="line">$obj.click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);<span class="comment">//jquery对象绑定事件</span></div></pre></td></tr></table></figure>
-<h3 id="错误的用法"><a href="#错误的用法" class="headerlink" title="错误的用法"></a>错误的用法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(“div”).innerHTML;<span class="comment">//jquery对象不能调用dom方法</span></div><div class="line"><span class="comment">//dom对象不能调用jquery方法。</span></div><div class="line"><span class="built_in">document</span>.getElementById(“btnShowDiv”).show();</div></pre></td></tr></table></figure>
+<h3 id="错误的用法"><a href="#错误的用法" class="headerlink" title="错误的用法"></a>错误的用法</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(“div”).innerHTML;<span class="comment">//jquery对象不能调用dom方法</span></div><div class="line"><span class="comment">//dom对象不能调用jquery方法。</span></div><div class="line"><span class="built_in">document</span>.getElementById(“btnShowDiv”).show();</div></pre></td></tr></table></figure>
 <h3 id="深入了解jQuery对象"><a href="#深入了解jQuery对象" class="headerlink" title="深入了解jQuery对象"></a>深入了解jQuery对象</h3><p>jQuery对象其实就是DOM对象的包装集（包装了DOM对象的集合）<br>联想记忆：衣服和洗衣机的关系  </p>
 <h3 id="jQuery对象和DOM对象的相互转换"><a href="#jQuery对象和DOM对象的相互转换" class="headerlink" title="jQuery对象和DOM对象的相互转换"></a>jQuery对象和DOM对象的相互转换</h3><ul>
 <li>jquery对象转DOM对象</li>
@@ -309,7 +550,15 @@
 <ul>
 <li>DOM对象转jquery对象（联想记忆：我有钱[美元]，所以我的功能就更强大）</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $obj = $(domObj);</div><div class="line"><span class="comment">// $(document).ready(function()&#123;&#125;);就是典型的DOM对象转jQuery对象</span></div><div class="line"></div><div class="line"><span class="string">``</span><span class="string">`  </span></div><div class="line"></div><div class="line">## 区分jQuery和JavaScript</div><div class="line"></div><div class="line">JavaScript是一门编程语言，jquery是用JavaScript实现的一个JavaScript库，目的是简化我们的开发。（联想记忆：不能扛着洗衣机去出差） </div><div class="line"></div><div class="line">![js与jquery的区别图](img/js yu jquery qubie.png)  </div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## jQUery 选择器</div><div class="line"></div><div class="line">### jquery 选择器概念</div><div class="line"></div><div class="line">- 为什么要学习jquery 选择器？</div><div class="line"></div><div class="line">考虑兼容性的话，js提供的获取元素的方法太少了,只有两个，不能够满足我们的要求，比如想要通过class来获取元素就不行了。</div><div class="line"></div><div class="line">`<span class="string">``</span>js</div><div class="line"><span class="built_in">document</span>.getElementById(“btnShowDiv”);</div><div class="line"><span class="built_in">document</span>.getElementsByTagName(“div”);</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $obj = $(domObj);</div><div class="line"><span class="comment">// $(document).ready(function()&#123;&#125;);就是典型的DOM对象转jQuery对象</span></div></pre></td></tr></table></figure>
+<h2 id="区分jQuery和JavaScript"><a href="#区分jQuery和JavaScript" class="headerlink" title="区分jQuery和JavaScript"></a>区分jQuery和JavaScript</h2><p>JavaScript是一门编程语言，jquery是用JavaScript实现的一个JavaScript库，目的是简化我们的开发。（联想记忆：不能扛着洗衣机去出差） </p>
+<p><img src="http://www.ccyyao.top/images/js yu jquery qubie.png" alt="js与jquery的区别图">  </p>
+<hr>
+<h2 id="jQUery-选择器"><a href="#jQUery-选择器" class="headerlink" title="jQUery 选择器"></a>jQUery 选择器</h2><h3 id="jquery-选择器概念"><a href="#jquery-选择器概念" class="headerlink" title="jquery 选择器概念"></a>jquery 选择器概念</h3><ul>
+<li>为什么要学习jquery 选择器？</li>
+</ul>
+<p>考虑兼容性的话，js提供的获取元素的方法太少了,只有两个，不能够满足我们的要求，比如想要通过class来获取元素就不行了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(“btnShowDiv”);</div><div class="line"><span class="built_in">document</span>.getElementsByTagName(“div”);</div></pre></td></tr></table></figure>
 <ul>
 <li>什么是jQuery选择器？</li>
 </ul>
