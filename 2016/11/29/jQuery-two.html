@@ -23,7 +23,7 @@
 设置单个样式
 
 12345// name:需要设置的样式名称// value:对应的样式值css(name,value);//使用案例$(&quot;#one&quot;).css(&quot;background&quot;,&quot;gray&quot;); //将背景修改为灰色">
-<meta property="og:updated_time" content="2016-11-30T10:57:39.119Z">
+<meta property="og:updated_time" content="2016-11-30T13:32:51.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery-two">
 <meta name="twitter:description" content="jQuery 基础课程—jQuery操作DOMjQuery 操作样式css 操作（很重要）
@@ -162,7 +162,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a>
+                        <a href="/tags/DOM节点/" style="font-size: 10px;">DOM节点</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/class操作/" style="font-size: 10px;">class操作</a> <a href="/tags/css操作/" style="font-size: 10px;">css操作</a> <a href="/tags/jQuery/" style="font-size: 20px;">jQuery</a> <a href="/tags/jQuery动画/" style="font-size: 10px;">jQuery动画</a> <a href="/tags/jQuery操作/" style="font-size: 10px;">jQuery操作</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a>
                     </div>
                 </section>
                 
@@ -270,7 +270,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM节点/">DOM节点</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/class操作/">class操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css操作/">css操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery动画/">jQuery动画</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery操作/">jQuery操作</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -373,7 +373,39 @@
 <li>show/hide修改的是元素的height,width,opacity。slide系列方法修改的是元素的height。fade系列方法修改的是元素的opacity。这三种方法修改的这些值，都是带数字的，因为带了数字才能做渐变。</li>
 </ul>
 <h3 id="自定义动画"><a href="#自定义动画" class="headerlink" title="自定义动画"></a>自定义动画</h3><p>animate：自定义动画。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$(selector).animate(&#123;params&#125;,[speed],[callback]);</div><div class="line"><span class="comment">// &#123;params&#125;：要执行动画的CSS属性，带数字（必选）</span></div><div class="line"><span class="comment">// speed：执行动画时长（可选）</span></div><div class="line"><span class="comment">// callback：动画执行完后立即执行的回调函数（可选）</span></div></pre></td></tr></table></figure>
+<p>动画支持的属性：<a href="http://www.w3school.com.cn/jquery/effect_animate.asp" target="_blank" rel="external">http://www.w3school.com.cn/jquery/effect_animate.asp</a></p>
+<h3 id="eeasing-参数"><a href="#eeasing-参数" class="headerlink" title="eeasing 参数"></a>eeasing 参数</h3><p>控制动画在不同元素的速度，默认为“swing”<br>“swing”：在开头和结尾移动慢，在中间移动速度快<br>“linear”：匀速移动</p>
+<h3 id="动画队列问题"><a href="#动画队列问题" class="headerlink" title="动画队列问题"></a>动画队列问题</h3><p>在同一个元素上执行多个动画，那么对于这个动画来说，后面的动画会被放到动画队列中，等前面的动画执行完成了才会执行。</p>
+<h3 id="停止动画"><a href="#停止动画" class="headerlink" title="停止动画"></a>停止动画</h3><p>stop 方法：停止动画效果；<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">stop(clearQueue,jumpToEnd);</div><div class="line"><span class="comment">//第一个参数，是否清楚队列</span></div><div class="line"><span class="comment">//第二个参数，是否跳转到最终效果</span></div><div class="line"><span class="comment">//常用的停止动画：stop();</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="jquery-操作-DOM-节点"><a href="#jquery-操作-DOM-节点" class="headerlink" title="jquery 操作 DOM 节点"></a>jquery 操作 DOM 节点</h2><h3 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(htmlStr);</div><div class="line"><span class="comment">//htmlStr:html 格式的字符串</span></div><div class="line">$(<span class="string">"&lt;span&gt;这是一个 span 元素 &lt;/span&gt;"</span>);</div></pre></td></tr></table></figure>
+<h3 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h3><ul>
+<li>添加新建的元素：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//方法一：将jQuery对象添加到调用者内部的最后面。 </span></div><div class="line"><span class="comment">//var $span = $(“&lt;span&gt;这是一个span元素&lt;/span&gt;”);</span></div><div class="line">$(<span class="string">"div"</span>).append($span);</div><div class="line"><span class="comment">//方法二：参数传字符串，会自动创建成jquery对象</span></div><div class="line">$(<span class="string">"div"</span>).append(<span class="string">" &lt;span&gt; 这是一个span元素 &lt;/span&gt; "</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>添加已经存在的元素</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> $p = $(<span class="string">"p"</span>);</div><div class="line">$(<span class="string">"div"</span>).append($p);</div><div class="line"><span class="comment">//注意：如果添加的是已经存在的元素，那么会把之前的元素给干掉。（类似于剪切的功能）。</span></div></pre></td></tr></table></figure>
+<p>类似的用法：append  prepend  after before</p>
+<ul>
+<li>使用 html 方法创建元素</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置内容</span></div><div class="line">$(<span class="string">"div"</span>).html(<span class="string">"&lt;span&gt; 这是一段内容 &lt;/span&gt;"</span>);</div><div class="line"><span class="comment">//获取内容</span></div><div class="line">$(<span class="string">"div"</span>).html()</div></pre></td></tr></table></figure>
+<h3 id="清空元素"><a href="#清空元素" class="headerlink" title="清空元素"></a>清空元素</h3><ul>
+<li>empty： 清空指定节点的所有元素，自身保留（清理门户）</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).empty();<span class="comment">//清空div的所有内容（推荐使用，会清除子元素上绑定的内容，源码）</span></div></pre></td></tr></table></figure>
+<ul>
+<li>清空元素的第二种方法：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).html(<span class="string">""</span>);<span class="comment">//使用html方法来清空元素，不推荐使用，会造成内存泄漏，绑定的事件不会被清除。</span></div></pre></td></tr></table></figure>
+<h3 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h3><ul>
+<li>remove：相比于 empty 自身也删除（自杀）。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"div"</span>).remove();</div></pre></td></tr></table></figure>
+<h3 id="克隆元素"><a href="#克隆元素" class="headerlink" title="克隆元素"></a>克隆元素</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 复制$(selector)所匹配到的元素（深度复制）</span></div><div class="line"><span class="comment">//cloneNode(true)</span></div><div class="line"><span class="comment">// 返回值为复制的新元素，和原来的元素没有任何关系了。即修改新元素，不会影响到原来的元素。</span></div><div class="line">$(selector).clone();</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -384,7 +416,7 @@
         <p><span>本文标题:</span><a href="/2016/11/29/jQuery-two.html">jQuery-two</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 YY 的个人博客">YY</a></p>
         <p><span>发布时间:</span>2016年11月29日 - 19时09分</p>
-        <p><span>最后更新:</span>2016年11月30日 - 18时57分</p>
+        <p><span>最后更新:</span>2016年11月30日 - 21时32分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/11/29/jQuery-two.html" title="jQuery-two">http://www.ccyyao.top/2016/11/29/jQuery-two.html</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.ccyyao.top/2016/11/29/jQuery-two.html　　作者: YY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -413,7 +445,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery-基础课程—jQuery操作DOM"><span class="toc-number">1.</span> <span class="toc-text">jQuery 基础课程—jQuery操作DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-操作样式"><span class="toc-number">1.1.</span> <span class="toc-text">jQuery 操作样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css-操作（很重要）"><span class="toc-number">1.1.1.</span> <span class="toc-text">css 操作（很重要）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class-操作"><span class="toc-number">1.1.2.</span> <span class="toc-text">class 操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-动画"><span class="toc-number">1.2.</span> <span class="toc-text">jQuery 动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#显示与隐藏"><span class="toc-number">1.2.1.</span> <span class="toc-text">显示与隐藏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滑入与滑出"><span class="toc-number">1.3.</span> <span class="toc-text">滑入与滑出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#淡入与淡出"><span class="toc-number">1.4.</span> <span class="toc-text">淡入与淡出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画小总结"><span class="toc-number">1.5.</span> <span class="toc-text">动画小总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义动画"><span class="toc-number">1.5.1.</span> <span class="toc-text">自定义动画</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery-基础课程—jQuery操作DOM"><span class="toc-number">1.</span> <span class="toc-text">jQuery 基础课程—jQuery操作DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-操作样式"><span class="toc-number">1.1.</span> <span class="toc-text">jQuery 操作样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#css-操作（很重要）"><span class="toc-number">1.1.1.</span> <span class="toc-text">css 操作（很重要）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#class-操作"><span class="toc-number">1.1.2.</span> <span class="toc-text">class 操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-动画"><span class="toc-number">1.2.</span> <span class="toc-text">jQuery 动画</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#显示与隐藏"><span class="toc-number">1.2.1.</span> <span class="toc-text">显示与隐藏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#滑入与滑出"><span class="toc-number">1.3.</span> <span class="toc-text">滑入与滑出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#淡入与淡出"><span class="toc-number">1.4.</span> <span class="toc-text">淡入与淡出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画小总结"><span class="toc-number">1.5.</span> <span class="toc-text">动画小总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义动画"><span class="toc-number">1.5.1.</span> <span class="toc-text">自定义动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#eeasing-参数"><span class="toc-number">1.5.2.</span> <span class="toc-text">eeasing 参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#动画队列问题"><span class="toc-number">1.5.3.</span> <span class="toc-text">动画队列问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停止动画"><span class="toc-number">1.5.4.</span> <span class="toc-text">停止动画</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jquery-操作-DOM-节点"><span class="toc-number">1.6.</span> <span class="toc-text">jquery 操作 DOM 节点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建元素"><span class="toc-number">1.6.1.</span> <span class="toc-text">创建元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加元素"><span class="toc-number">1.6.2.</span> <span class="toc-text">添加元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清空元素"><span class="toc-number">1.6.3.</span> <span class="toc-text">清空元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除元素"><span class="toc-number">1.6.4.</span> <span class="toc-text">删除元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#克隆元素"><span class="toc-number">1.6.5.</span> <span class="toc-text">克隆元素</span></a></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
