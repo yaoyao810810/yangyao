@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jQuery 基础课程—jQuery其他必备知识 | 等待！！！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jQuery 基础课程—jQuery其他必备知识jQuery 操作 DOMjQuery 操作属性
+设置单个属性
+
+123456//第一个参数，需要设置的属性名//第二个参数，对应的属性值attr(name,value);//用法举例$(&quot;img&quot;).attr(&quot;title&quot;,&quot;呵呵&quot;);$(&quot;img&quot;).attr(&quot;alt&quot;,&quot;呵呵&quot;);
+
+设置多个属性
+
+12345678//参数是一个对象，包含">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery 基础课程—jQuery其他必备知识">
+<meta property="og:url" content="http://www.ccyyao.top/2016/12/01/jQuery-three.html">
+<meta property="og:site_name" content="等待！！！">
+<meta property="og:description" content="jQuery 基础课程—jQuery其他必备知识jQuery 操作 DOMjQuery 操作属性
+设置单个属性
+
+123456//第一个参数，需要设置的属性名//第二个参数，对应的属性值attr(name,value);//用法举例$(&quot;img&quot;).attr(&quot;title&quot;,&quot;呵呵&quot;);$(&quot;img&quot;).attr(&quot;alt&quot;,&quot;呵呵&quot;);
+
+设置多个属性
+
+12345678//参数是一个对象，包含">
+<meta property="og:updated_time" content="2016-12-01T11:08:48.240Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery 基础课程—jQuery其他必备知识">
+<meta name="twitter:description" content="jQuery 基础课程—jQuery其他必备知识jQuery 操作 DOMjQuery 操作属性
+设置单个属性
+
+123456//第一个参数，需要设置的属性名//第二个参数，对应的属性值attr(name,value);//用法举例$(&quot;img&quot;).attr(&quot;title&quot;,&quot;呵呵&quot;);$(&quot;img&quot;).attr(&quot;alt&quot;,&quot;呵呵&quot;);
+
+设置多个属性
+
+12345678//参数是一个对象，包含">
+  
+    <link rel="alternative" href="/atom.xml" title="等待！！！" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">YY</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/categories">我的分类</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                            <li><a href="/about">关于我哟</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1030706805@qq.com" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yaoyao810810" title="github">github</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                                <a class="fl QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1030706805&site=qq&menu=yes" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/DOM节点/" style="font-size: 10px;">DOM节点</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JS递归/" style="font-size: 10px;">JS递归</a> <a href="/tags/JS闭包/" style="font-size: 10px;">JS闭包</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/class操作/" style="font-size: 10px;">class操作</a> <a href="/tags/css操作/" style="font-size: 10px;">css操作</a> <a href="/tags/jQueryde的DOM操作/" style="font-size: 10px;">jQueryde的DOM操作</a> <a href="/tags/jQuery事件/" style="font-size: 10px;">jQuery事件</a> <a href="/tags/jQuery介绍/" style="font-size: 10px;">jQuery介绍</a> <a href="/tags/jQuery动画/" style="font-size: 10px;">jQuery动画</a> <a href="/tags/jQuery插件机制/" style="font-size: 10px;">jQuery插件机制</a> <a href="/tags/jQuery操作/" style="font-size: 10px;">jQuery操作</a> <a href="/tags/jQuery概念/" style="font-size: 10px;">jQuery概念</a> <a href="/tags/jQuery补充/" style="font-size: 10px;">jQuery补充</a> <a href="/tags/jQuery详细解释/" style="font-size: 10px;">jQuery详细解释</a> <a href="/tags/jQuery选择器/" style="font-size: 10px;">jQuery选择器</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/事件兼容性处理/" style="font-size: 10px;">事件兼容性处理</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a> <a href="/tags/沙箱模式/" style="font-size: 10px;">沙箱模式</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.ihoey.com/">梦魇小栈</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">YY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">YY</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/categories">我的分类</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                    <li><a href="/about">关于我哟</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1030706805@qq.com" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yaoyao810810" title="github">github</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                        <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1030706805&site=qq&menu=yes" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-jQuery-three" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/01/jQuery-three.html" class="article-date">
+      <time datetime="2016-12-01T08:20:09.000Z" itemprop="datePublished">2016-12-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery 基础课程—jQuery其他必备知识
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQueryde的DOM操作/">jQueryde的DOM操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery事件/">jQuery事件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件机制/">jQuery插件机制</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery补充/">jQuery补充</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="jQuery-基础课程—jQuery其他必备知识"><a href="#jQuery-基础课程—jQuery其他必备知识" class="headerlink" title="jQuery 基础课程—jQuery其他必备知识"></a>jQuery 基础课程—jQuery其他必备知识</h1><h2 id="jQuery-操作-DOM"><a href="#jQuery-操作-DOM" class="headerlink" title="jQuery 操作 DOM"></a>jQuery 操作 DOM</h2><h3 id="jQuery-操作属性"><a href="#jQuery-操作属性" class="headerlink" title="jQuery 操作属性"></a>jQuery 操作属性</h3><ul>
+<li>设置单个属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一个参数，需要设置的属性名</span></div><div class="line"><span class="comment">//第二个参数，对应的属性值</span></div><div class="line">attr(name,value);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"title"</span>,<span class="string">"呵呵"</span>);</div><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"alt"</span>,<span class="string">"呵呵"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>设置多个属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//参数是一个对象，包含了需要设置的属性名和属性值</span></div><div class="line">attr(obj);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).attr(&#123;</div><div class="line">    <span class="attr">title</span>:<span class="string">"呵呵"</span>,</div><div class="line">    <span class="attr">alt</span>:<span class="string">"呵呵"</span>,</div><div class="line">    <span class="attr">style</span>:<span class="string">"opacity:.5"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li>获取属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//传需要获取的属性名称，返回对应的属性值</span></div><div class="line">attr(name);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line"><span class="keyword">var</span> oTitle=$(<span class="string">"img"</span>).attr(<span class="string">"title"</span>);</div><div class="line">alert(oTitle);</div></pre></td></tr></table></figure>
+<p>注意：获取属性时，只会获取到第一个元素对应的属性，与css方法一样。<br>    获取属性时，如果该属性不存在，那么会返回 undefined。</p>
+<ul>
+<li>移出属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//参数：需要移出的属性名，如果传空，那么不会有任何操作，注意，并不是移出所有的属性，区分 removeClass。</span></div><div class="line">removeAttr(name);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).removeAttr(<span class="string">"title"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>prop<br>注意：在 jQuery1.6 之后，对于 <code>checked</code> <code>selected</code> <code>disable</code> 这类 <code>boolean</code> 类型的属性来说，如果使用 <code>attr</code> 方法获取属性值，得到的不是 true 和 false，而是 <code>checked</code> 以及 <code>undefined</code>.使用 prop 方法来获取或者设置 <code>checked  selected disable</code> 这类的值，prop 方法使用跟 attr 方法一样。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置属性</span></div><div class="line">$(<span class="string">":checked"</span>).prop(<span class="string">"checked"</span>,<span class="literal">true</span>);</div><div class="line"><span class="comment">//获取属性</span></div><div class="line">$(<span class="string">":checked"</span>).prop(<span class="string">"checked"</span>);</div><div class="line"><span class="comment">//返回 true 或者 false</span></div></pre></td></tr></table></figure>
+<h3 id="jQuery-操作值与内容"><a href="#jQuery-操作值与内容" class="headerlink" title="jQuery 操作值与内容"></a>jQuery 操作值与内容</h3><ul>
+<li>val 方法<br>val 方法用于设置和获取表单元素的值，例如： <code>input select textarea</code> 的值</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置值</span></div><div class="line">$(<span class="string">"#name"</span>).val(<span class="string">"张三"</span>);</div><div class="line"><span class="comment">//获取值</span></div><div class="line">$(<span class="string">"#name"</span>).val();</div></pre></td></tr></table></figure>
+<ul>
+<li>html 方法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置内容</span></div><div class="line">$(<span class="string">"div"</span>).html(<span class="string">"&lt;span&gt;这是一段内容&lt;/span&gt;"</span>);</div><div class="line"><span class="comment">//获取内容</span></div><div class="line">$(<span class="string">"div"</span>).html();</div></pre></td></tr></table></figure>
+<ul>
+<li>text 方法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置内容</span></div><div class="line">$(<span class="string">"div"</span>).text(<span class="string">"&lt;span&gt;这是一段内容&lt;/span&gt;"</span>);</div><div class="line"><span class="comment">//获取内容</span></div><div class="line">$(<span class="string">"div"</span>).text();</div></pre></td></tr></table></figure>
+<ul>
+<li>html方法与 text 方法的区别：<ul>
+<li>html 方法会识别 html 标签， text 方法会把内容直接当成字符串，并不会识别 html 标签。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="jQuery-操作尺寸"><a href="#jQuery-操作尺寸" class="headerlink" title="jQuery 操作尺寸"></a>jQuery 操作尺寸</h3><ul>
+<li>height 设置或者获取高度</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//带参数表示设置高度</span></div><div class="line">$(<span class="string">"img"</span>).height(<span class="number">200</span>);</div><div class="line"><span class="comment">//不带参数获取高度</span></div><div class="line">$(<span class="string">"img"</span>).height();</div></pre></td></tr></table></figure>
+<p>返回值是number类型，而是用<code>$(&quot;img&quot;).css(&quot;width&quot;)</code>返回的是字符串。</p>
+<ul>
+<li>width 设置获取宽度，与高度操作功能一样</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//带参数表示设置宽度</span></div><div class="line">$(<span class="string">"img"</span>).width(<span class="number">200</span>);</div><div class="line"><span class="comment">//不带参数获取宽度</span></div><div class="line">$(<span class="string">"img"</span>).width();</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="jQuery-操作坐标值"><a href="#jQuery-操作坐标值" class="headerlink" title="jQuery 操作坐标值"></a>jQuery 操作坐标值</h3><ul>
+<li>offset 设置或者获取元素相对文档 document 的位置</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//设置位置</span></div><div class="line">$(selector).offset(&#123;<span class="attr">left</span>:<span class="number">100</span>, <span class="attr">top</span>: <span class="number">150</span>&#125;);</div><div class="line"><span class="comment">//获取位置</span></div><div class="line">$(selector).offset();</div></pre></td></tr></table></figure>
+<p>注意：使用 offset 操作，如果元素没有设置定位（默认 position：static）则会把 position 修改为 relative 会修改 left top。</p>
+<ul>
+<li>position 获取相对于其最近的有定位的父元素的位置。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取，返回值为对象：&#123;left:num,top:num&#125;;</span></div><div class="line">$(selector).position();</div></pre></td></tr></table></figure>
+<p>注意：position 方法只能获取，不能设置</p>
+<ul>
+<li>scrollTop 设置或者获取垂直滚动条的位置</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 有参数表示设置偏移，参数为数值类型</span></div><div class="line">$(selector).scrollTop(<span class="number">100</span>);</div><div class="line"><span class="comment">// 无参数表示获取偏移</span></div><div class="line">$(selector).scrollTop();</div></pre></td></tr></table></figure>
+<ul>
+<li>scrollLeft 设置或者获取水平滚动条的位置</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 有参数表示设置偏移，参数为数值类型</span></div><div class="line">$(selector).scrollLeft(<span class="number">100</span>);</div><div class="line"><span class="comment">// 无参数表示获取偏移</span></div><div class="line">$(selector).scrollLeft();</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="jQuery-事件机制"><a href="#jQuery-事件机制" class="headerlink" title="jQuery 事件机制"></a>jQuery 事件机制</h2><p>jQuery对JavaScript事件进行了封装，增加并扩展了事件处理机制。jQuery不仅提供了更加优雅的事件处理语法，而且极大的增强了事件的处理能力。</p>
+<h3 id="jQuery-事件的发展历程"><a href="#jQuery-事件的发展历程" class="headerlink" title="jQuery 事件的发展历程"></a>jQuery 事件的发展历程</h3><p>简单事件绑定》bind事件绑定》delegate事件绑定》on事件绑定</p>
+<ul>
+<li><p>简单事件绑定</p>
+<ul>
+<li>click（handler） 单击事件</li>
+<li>mouseenter（handler） 鼠标进入事件</li>
+<li>mouseleave（handler） 鼠标离开事件</li>
+<li>scroll（handler） 滚动事件</li>
+<li>缺点：一次只能绑定一个事件</li>
+</ul>
+</li>
+<li><p>bind 事件绑定<br>不推荐使用，jQuery1.7版本后被on取代</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//绑定多个事件</span></div><div class="line"><span class="comment">//第一个参数：事件类型</span></div><div class="line"><span class="comment">//第二个参数：事件处理程序</span></div><div class="line">$(<span class="string">"p"</span>).bind(<span class="string">"click mouseenter"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//事件响应方法</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>缺点：不支持动态创建出来的元素绑定事件。</p>
+<ul>
+<li>delegate 事件绑定，支持动态绑定事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 第一个参数：selector，要绑定事件的元素</span></div><div class="line"><span class="comment">// 第二个参数：事件类型</span></div><div class="line"><span class="comment">// 第三个参数：事件处理函数</span></div><div class="line">$(<span class="string">".parentBox"</span>).delegate(<span class="string">"p"</span>, <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">//为 .parentBox下面的所有的p标签绑定事件</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>理解：为什么delegate支持动态绑定事件？原因是事件冒泡机制，因为事件时绑定到父元素上的，由子元素触发。</p>
+<ul>
+<li>on 事件绑定<br>jQuery1.7之后，jQuery用 on统一了所有事件的处理方法。</li>
+</ul>
+<h3 id="on事件绑定"><a href="#on事件绑定" class="headerlink" title="on事件绑定"></a>on事件绑定</h3><p>优势：最现代的方法，兼容zepto移动端类似jQuery的一个库，强烈建议使用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一个参数：events 绑定事件的名称可以是由空格分隔的多个事件，标准事件或者自定义事件</span></div><div class="line"><span class="comment">//第二个参数：selector 执行事件的后代元素（可选），如果没有后代元素，那么事件将有自己执行。</span></div><div class="line"><span class="comment">//第三个参数：data 传递给处理函数的数据，事件触发的时候通过 event.data 来使用。</span></div><div class="line"><span class="comment">//第四个参数：handler 事件处理函数</span></div><div class="line">$(selector).on(events[.selector][.data][.handler]);</div><div class="line"><span class="comment">//例子：</span></div><div class="line"><span class="comment">// 表示给$(selector)绑定代理事件，当必须是它的内部元素span才能触发这个事件，支持动态绑定</span></div><div class="line">$(selector).on( <span class="string">"click"</span>,<span class="string">"span"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</div><div class="line"><span class="comment">// 表示给$(selector)绑定事件，并且由自己触发，不支持动态绑定（不使用代理）。</span></div><div class="line">$(selector).on( <span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</div></pre></td></tr></table></figure>
+<h3 id="事件解绑"><a href="#事件解绑" class="headerlink" title="事件解绑"></a>事件解绑</h3><ul>
+<li>unbind()方式：作用解绑事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(selector).unbind();<span class="comment">//解绑所有的事件</span></div><div class="line">$(selector).unbind(<span class="string">"click"</span>);<span class="comment">//解绑指定的事件</span></div></pre></td></tr></table></figure>
+<ul>
+<li>undelegate（） 解绑事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(selector).undelegate();<span class="comment">//解绑所欲的delegate事件</span></div><div class="line">$(selector).undelegate（<span class="string">"click"</span>）;<span class="comment">//解绑所有的click事件</span></div></pre></td></tr></table></figure>
+<ul>
+<li>off 方法 作用：解绑事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 解绑匹配元素的所有事件</span></div><div class="line">$(selector).off();</div><div class="line"><span class="comment">// 解绑匹配元素的所有click事件</span></div><div class="line">$(selector).off(<span class="string">"click"</span>);</div><div class="line"><span class="comment">// 解绑所有代理的click事件，元素本身的事件不会被解绑 </span></div><div class="line">$(selector).off( <span class="string">"click"</span>, <span class="string">"**"</span> );</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="事件触发"><a href="#事件触发" class="headerlink" title="事件触发"></a>事件触发</h2><ul>
+<li>简单事件触发</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(selector).click();<span class="comment">//触发click事件</span></div></pre></td></tr></table></figure>
+<ul>
+<li>trigger 方法触发事件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(selector).trigger(<span class="string">"click"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>triggerHandler触发 事件响应方法，不触发浏览器行为<br>比如:文本框获得焦点的默认行为</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(selector).triggerHandler(<span class="string">"focus"</span>);</div></pre></td></tr></table></figure>
+<h2 id="jQuery-事件对象"><a href="#jQuery-事件对象" class="headerlink" title="jQuery 事件对象"></a>jQuery 事件对象</h2><table>
+<thead>
+<tr>
+<th>对象属性</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>event.type</td>
+<td>事件类型</td>
+</tr>
+<tr>
+<td>event.data</td>
+<td>存储绑定事件时传递的附加数据</td>
+</tr>
+<tr>
+<td>event.target</td>
+<td>点了谁就是谁</td>
+</tr>
+<tr>
+<td>event.currentTarget</td>
+<td>当前DOM元素，等同于 this</td>
+</tr>
+<tr>
+<td>event.delegateTarget</td>
+<td>代理对象</td>
+</tr>
+<tr>
+<td>screenX 和 screenY</td>
+<td>对应屏幕最左上角的值</td>
+</tr>
+<tr>
+<td>offsetX 和 offsetY</td>
+<td>点击的位置距离元素的左上角的位置</td>
+</tr>
+<tr>
+<td>clientX 和 clientY</td>
+<td>距离页面左上角的位置（忽视滚动条）</td>
+</tr>
+<tr>
+<td>pageX 和 pateY</td>
+<td>距离页面顶部的左上角的位置（会计算滚动条的距离）</td>
+</tr>
+<tr>
+<td>event.witch</td>
+<td>鼠标按键类型，1=鼠标左键 2=鼠标中键 3=鼠标右键</td>
+</tr>
+<tr>
+<td>event.keyCode</td>
+<td>按下的键盘代码</td>
+</tr>
+<tr>
+<td>event.stopPropagation()</td>
+<td>阻止事件冒泡行为</td>
+</tr>
+<tr>
+<td>return false</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="jQuery-补充"><a href="#jQuery-补充" class="headerlink" title="jQuery 补充"></a>jQuery 补充</h2><h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3><p>链式编程原理：return this;<br>通常情况下，只有设置操作才能把链式编程延续下去。因为获取操作的时候，会返回获取到的相应的值，无法返回 this。</p>
+<p>end(); // 筛选选择器会改变jQuery对象的DOM对象，想要回复到上一次的状态，并且返回匹配元素之前的状态。</p>
+<h3 id="隐式迭代"><a href="#隐式迭代" class="headerlink" title="隐式迭代"></a>隐式迭代</h3><p>隐式迭代的意思是：在方法的内部会为匹配到的所有元素进行循环遍历，执行相应的方法；而不用我们再进行循环，简化我们的操作，方便我们调用。<br>如果获取的是多元素的值，大部分情况下返回的是第一个元素的值。<br>设置性操作的时候：设置的是所有的元素<br>获取性操作：获取的是第一个元素。</p>
+<h3 id="each-方法"><a href="#each-方法" class="headerlink" title="each 方法"></a>each 方法</h3><p>有了隐式迭代，为什么还要使用each函数遍历？<br>大部分情况下是不需要使用each方法的，因为jQuery的隐式迭代特性。<br>如果要对每个元素做不同的处理，这时候就用到了each方法<br>作用：遍历jQuery对象集合，为每个匹配的元素执行一个函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 参数一表示当前元素在所有匹配元素中的索引号</span></div><div class="line"><span class="comment">// 参数二表示当前元素（DOM对象）</span></div><div class="line">$(selector).each(<span class="function"><span class="keyword">function</span>(<span class="params">index,element</span>)</span>&#123;&#125;);</div></pre></td></tr></table></figure>
+<h3 id="多库共享"><a href="#多库共享" class="headerlink" title="多库共享"></a>多库共享</h3><p>我们知道jQuery占用了$这个标识符，如果引用的其他库也用到$这个标识符，这时候为了保证每个库都能正常使用，这时候就存在了多库共存的问题。<br>后引入的$的会覆盖掉先引入的库中的$。<br>$ === jQuery<br>解决办法：<br>jQuery的$和jQuery是两个相同的变量，因此遇到多库共存的时候，可以让jquery交出$符的控制权，这个时候还是可以使用$.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log($);<span class="comment">//function(selector, context)&#123;&#125;</span></div><div class="line"><span class="comment">//$.noConflict();//释放$的控制权</span></div><div class="line"><span class="built_in">console</span>.log($);&#123;<span class="attr">name</span>:<span class="string">"zhangsan"</span>,<span class="attr">age</span>:<span class="number">12</span>&#125;</div><div class="line"></div><div class="line">jQuery(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	jQuery(<span class="string">"div"</span>).html(<span class="string">"我不是div的内容"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="jQuery-插件机制"><a href="#jQuery-插件机制" class="headerlink" title="jQuery 插件机制"></a>jQuery 插件机制</h2><h3 id="第三方插件"><a href="#第三方插件" class="headerlink" title="第三方插件"></a>第三方插件</h3><p>jQuery有着丰富的插件，使用这些插件能给jQuery提供一些额外的功能。<br>jquery.color.js<br>animate不支持颜色的渐变，但是使用了jquery.color.js后，就可以支持颜色的渐变了。<br>如何使用第三方插件：<br>1.引入jQuery文件<br>2.引入插件<br>3.使用插件</p>
+<h3 id="制作插件"><a href="#制作插件" class="headerlink" title="制作插件"></a>制作插件</h3><ul>
+<li>jQuery 对象扩展方法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$.fn.pluginName=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</div></pre></td></tr></table></figure>
+<h3 id="jquery-UI"><a href="#jquery-UI" class="headerlink" title="jquery UI"></a>jquery UI</h3><p>jquery UI 专指由 jQuery 官方维护的UI方向的插件。<br>官方API：<a href="http://api.jqueryui.com/category/all/" target="_blank" rel="external">http://api.jqueryui.com/category/all/</a><br>其他教程：jQueryUI教程<br>基本使用:<br>1.引入jQueryUI的样式文件<br>2.引入jQuery<br>3.引入jQueryUI的js文件<br>4.使用jQueryUI功能</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/12/01/jQuery-three.html">jQuery 基础课程—jQuery其他必备知识</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YY 的个人博客">YY</a></p>
+        <p><span>发布时间:</span>2016年12月01日 - 16时20分</p>
+        <p><span>最后更新:</span>2016年12月01日 - 19时08分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/12/01/jQuery-three.html" title="jQuery 基础课程—jQuery其他必备知识">http://www.ccyyao.top/2016/12/01/jQuery-three.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.ccyyao.top/2016/12/01/jQuery-three.html　　作者: YY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/11/29/jQuery-two.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery 基础课程—jQuery操作DOM</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#jQuery-基础课程—jQuery其他必备知识"><span class="toc-number">1.</span> <span class="toc-text">jQuery 基础课程—jQuery其他必备知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-操作-DOM"><span class="toc-number">1.1.</span> <span class="toc-text">jQuery 操作 DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-操作属性"><span class="toc-number">1.1.1.</span> <span class="toc-text">jQuery 操作属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-操作值与内容"><span class="toc-number">1.1.2.</span> <span class="toc-text">jQuery 操作值与内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-操作尺寸"><span class="toc-number">1.1.3.</span> <span class="toc-text">jQuery 操作尺寸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-操作坐标值"><span class="toc-number">1.1.4.</span> <span class="toc-text">jQuery 操作坐标值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-事件机制"><span class="toc-number">1.2.</span> <span class="toc-text">jQuery 事件机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery-事件的发展历程"><span class="toc-number">1.2.1.</span> <span class="toc-text">jQuery 事件的发展历程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#on事件绑定"><span class="toc-number">1.2.2.</span> <span class="toc-text">on事件绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件解绑"><span class="toc-number">1.2.3.</span> <span class="toc-text">事件解绑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件触发"><span class="toc-number">1.3.</span> <span class="toc-text">事件触发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-事件对象"><span class="toc-number">1.4.</span> <span class="toc-text">jQuery 事件对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-补充"><span class="toc-number">1.5.</span> <span class="toc-text">jQuery 补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#链式编程"><span class="toc-number">1.5.1.</span> <span class="toc-text">链式编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隐式迭代"><span class="toc-number">1.5.2.</span> <span class="toc-text">隐式迭代</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#each-方法"><span class="toc-number">1.5.3.</span> <span class="toc-text">each 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多库共享"><span class="toc-number">1.5.4.</span> <span class="toc-text">多库共享</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-插件机制"><span class="toc-number">1.6.</span> <span class="toc-text">jQuery 插件机制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第三方插件"><span class="toc-number">1.6.1.</span> <span class="toc-text">第三方插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#制作插件"><span class="toc-number">1.6.2.</span> <span class="toc-text">制作插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jquery-UI"><span class="toc-number">1.6.3.</span> <span class="toc-text">jquery UI</span></a></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/12/01/jQuery-three.html" data-title="jQuery 基础课程—jQuery其他必备知识" data-url="http://www.ccyyao.top/2016/12/01/jQuery-three.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yyao"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/11/29/jQuery-two.html" title="下一篇: jQuery 基础课程—jQuery操作DOM">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/01/jQuery-three.html">jQuery 基础课程—jQuery其他必备知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/29/jQuery-two.html">jQuery 基础课程—jQuery操作DOM</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/28/jQuery-one.html">jQuery 基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/markdown-1.html">Markdown 使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/20/javascript-advamud.html">JS高级知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/about_themes.html">关于主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/hello-world.html">Hello World</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 YY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >我站访客数量: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -146,7 +146,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/DOM节点/" style="font-size: 10px;">DOM节点</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/class操作/" style="font-size: 10px;">class操作</a> <a href="/tags/css操作/" style="font-size: 10px;">css操作</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/jQuery介绍/" style="font-size: 10px;">jQuery介绍</a> <a href="/tags/jQuery动画/" style="font-size: 10px;">jQuery动画</a> <a href="/tags/jQuery操作/" style="font-size: 10px;">jQuery操作</a> <a href="/tags/jQuery概念/" style="font-size: 10px;">jQuery概念</a> <a href="/tags/jQuery详细解释/" style="font-size: 10px;">jQuery详细解释</a> <a href="/tags/jQuery选择器/" style="font-size: 10px;">jQuery选择器</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a>
+                        <a href="/tags/DOM节点/" style="font-size: 10px;">DOM节点</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JS递归/" style="font-size: 10px;">JS递归</a> <a href="/tags/JS闭包/" style="font-size: 10px;">JS闭包</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/class操作/" style="font-size: 10px;">class操作</a> <a href="/tags/css操作/" style="font-size: 10px;">css操作</a> <a href="/tags/jQueryde的DOM操作/" style="font-size: 10px;">jQueryde的DOM操作</a> <a href="/tags/jQuery事件/" style="font-size: 10px;">jQuery事件</a> <a href="/tags/jQuery介绍/" style="font-size: 10px;">jQuery介绍</a> <a href="/tags/jQuery动画/" style="font-size: 10px;">jQuery动画</a> <a href="/tags/jQuery插件机制/" style="font-size: 10px;">jQuery插件机制</a> <a href="/tags/jQuery操作/" style="font-size: 10px;">jQuery操作</a> <a href="/tags/jQuery概念/" style="font-size: 10px;">jQuery概念</a> <a href="/tags/jQuery补充/" style="font-size: 10px;">jQuery补充</a> <a href="/tags/jQuery详细解释/" style="font-size: 10px;">jQuery详细解释</a> <a href="/tags/jQuery选择器/" style="font-size: 10px;">jQuery选择器</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/事件兼容性处理/" style="font-size: 10px;">事件兼容性处理</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a> <a href="/tags/沙箱模式/" style="font-size: 10px;">沙箱模式</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a>
                     </div>
                 </section>
                 
@@ -223,6 +223,79 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-jQuery-three" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/01/jQuery-three.html" class="article-date">
+      <time datetime="2016-12-01T08:20:09.000Z" itemprop="datePublished">2016-12-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/01/jQuery-three.html">jQuery 基础课程—jQuery其他必备知识</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="jQuery-基础课程—jQuery其他必备知识"><a href="#jQuery-基础课程—jQuery其他必备知识" class="headerlink" title="jQuery 基础课程—jQuery其他必备知识"></a>jQuery 基础课程—jQuery其他必备知识</h1><h2 id="jQuery-操作-DOM"><a href="#jQuery-操作-DOM" class="headerlink" title="jQuery 操作 DOM"></a>jQuery 操作 DOM</h2><h3 id="jQuery-操作属性"><a href="#jQuery-操作属性" class="headerlink" title="jQuery 操作属性"></a>jQuery 操作属性</h3><ul>
+<li>设置单个属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一个参数，需要设置的属性名</span></div><div class="line"><span class="comment">//第二个参数，对应的属性值</span></div><div class="line">attr(name,value);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"title"</span>,<span class="string">"呵呵"</span>);</div><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"alt"</span>,<span class="string">"呵呵"</span>);</div></pre></td></tr></table></figure>
+<ul>
+<li>设置多个属性</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//参数是一个对象，包含了需要设置的属性名和属性值</span></div><div class="line">attr(obj);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).attr(&#123;</div><div class="line">    <span class="attr">title</span>:<span class="string">"呵呵"</span>,</div><div class="line">    <span class="attr">alt</span>:<span class="string">"呵呵"</span>,</div><div class="line">    <span class="attr">style</span>:<span class="string">"opacity:.5"</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQueryde的DOM操作/">jQueryde的DOM操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery事件/">jQuery事件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件机制/">jQuery插件机制</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery补充/">jQuery补充</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/12/01/jQuery-three.html#more">点我看更多 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-jQuery-two" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -462,7 +535,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/20/javascript-advamud.html">JavaScript高级知识总结</a>
+      <a class="article-title" href="/2016/11/20/javascript-advamud.html">JS高级知识总结</a>
     </h1>
   
 
@@ -487,7 +560,7 @@
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS递归/">JS递归</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS闭包/">JS闭包</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/严格模式/">严格模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事件兼容性处理/">事件兼容性处理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/沙箱模式/">沙箱模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/缓存/">缓存</a></li></ul>
     </div>
 
       
