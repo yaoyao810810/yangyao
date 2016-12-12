@@ -43,7 +43,7 @@ http
 node 模块：
 核心模块（只要安装了node就会有的模块，已经被打包了node.exe文件）
 自定义模块（我们自己写的j">
-<meta property="og:updated_time" content="2016-12-12T11:08:30.034Z">
+<meta property="og:updated_time" content="2016-12-12T11:16:44.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs_p3">
 <meta name="twitter:description" content="nodenodejs中没有dom，没有bom
@@ -342,6 +342,7 @@ node 模块：
 </li>
 </ul>
 <h2 id="fs-文件操作模块"><a href="#fs-文件操作模块" class="headerlink" title="fs 文件操作模块"></a>fs 文件操作模块</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fs=request()</div><div class="line"><span class="comment">//  读取文件：</span></div><div class="line"><span class="comment">//  参数1：文件路径</span></div><div class="line"><span class="comment">//  参数2：文件编码</span></div><div class="line"><span class="comment">//  返回值：文件内容</span></div><div class="line"><span class="keyword">var</span> data = fs.readFileSync(<span class="string">'./index.html'</span>,<span class="string">'utf8'</span>)</div><div class="line"><span class="comment">//  追加文件</span></div><div class="line">fs.appendFileSync(<span class="string">'./xx.js'</span>,<span class="string">'我是小明，在哪？\r\n'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 创建目录</span></div><div class="line">    <span class="comment">// 判断目录是否存在，如果不存在，则创建</span></div><div class="line">    <span class="keyword">var</span> result = fs.existsSync(<span class="string">'data'</span>) <span class="comment">// 判断当前目录是否存在data目录</span></div><div class="line">    <span class="keyword">if</span>(!result)&#123;</div><div class="line">    <span class="built_in">console</span>.log(result)</div><div class="line">    <span class="comment">// 创建目录</span></div><div class="line">    fs.mkdirSync(<span class="string">'data'</span>)<span class="comment">// 在当前目录创建data目录</span></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<hr>
 <h2 id="dirname和firename"><a href="#dirname和firename" class="headerlink" title="dirname和firename"></a><strong>dirname和</strong>firename</h2><p>1, <strong>dirname 可在任意文件中直接使用,值表示当前文件所在路径字符串<br>2, </strong>firname 也可以在任意文件中使用,值表示当前文件的包含文件名的完整路径!</p>
 <h2 id="按顺序执行就是同步"><a href="#按顺序执行就是同步" class="headerlink" title="按顺序执行就是同步"></a>按顺序执行就是同步</h2><h2 id="form表单，提交get请求，会把请求参数添加到url中"><a href="#form表单，提交get请求，会把请求参数添加到url中" class="headerlink" title="form表单，提交get请求，会把请求参数添加到url中"></a>form表单，提交get请求，会把请求参数添加到url中</h2><h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向!"></a>重定向!</h2><ul>
 <li>在响应头里加上 Location:’新地址’,并设置状态为302</li>
@@ -349,6 +350,7 @@ node 模块：
 <li><code>res.writeHead(状态码)</code>// 设置状态码!</li>
 <li>浏览器接收到数据后会重新向新地址跳转!</li>
 </ul>
+<hr>
 <h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><ul>
 <li>node package manager</li>
 <li>node的包管理工具，管理的是第三方包</li>
@@ -359,6 +361,7 @@ node 模块：
 <li>初始化: <code>npm init</code></li>
 <li><code>npm install &lt;包名&gt;</code></li>
 </ul>
+<hr>
 <h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><h2 id="离线文档"><a href="#离线文档" class="headerlink" title="离线文档"></a>离线文档</h2><ul>
 <li><a href="https://zealdocs.org/" target="_blank" rel="external">windows版本</a></li>
 <li><a href="dash">mac版本</a></li>
@@ -389,7 +392,7 @@ node 模块：
         <p><span>本文标题:</span><a href="/2016/12/12/nodejs-p3.html">nodejs_p3</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 YY 的个人博客">YY</a></p>
         <p><span>发布时间:</span>2016年12月12日 - 19时01分</p>
-        <p><span>最后更新:</span>2016年12月12日 - 19时08分</p>
+        <p><span>最后更新:</span>2016年12月12日 - 19时16分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/12/12/nodejs-p3.html" title="nodejs_p3">http://www.ccyyao.top/2016/12/12/nodejs-p3.html</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.ccyyao.top/2016/12/12/nodejs-p3.html　　作者: YY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
