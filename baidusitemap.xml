@@ -4,8 +4,34 @@
 
     
   <url>
+    <loc>http://www.ccyyao.top/2016/12/13/nodejs-p2.html</loc>
+    <lastmod>2016-12-13T01:30:50.839Z</lastmod>
+    <data>
+        <display>
+        <title>nodejs_p2</title>
+        <pubTime>2016-12-13T01:26:12.000Z</pubTime>
+        
+        <tag>模块化的好处</tag>
+         
+        <tag>seajs 和requirejs区别</tag>
+         
+        <tag>node是什么?</tag>
+         
+        <tag>环境变量</tag>
+         
+         
+           
+             
+              <breadCrumb title="nodeJS" url="http://www.ccyyao.top/categories/nodeJS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ccyyao.top/2016/12/13/nodejs-p1.html</loc>
-    <lastmod>2016-12-13T01:22:52.351Z</lastmod>
+    <lastmod>2016-12-13T01:28:21.469Z</lastmod>
     <data>
         <display>
         <title>nodejs_p1</title>
