@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ccyyao.top/"/>
-  <updated>2016-12-13T01:30:50.839Z</updated>
+  <updated>2016-12-13T12:46:34.169Z</updated>
   <id>http://www.ccyyao.top/</id>
   
   <author>
@@ -14,6 +14,107 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>H5+CSS3-P2</title>
+    <link href="http://www.ccyyao.top/2016/12/13/H5-CSS3-P2.html"/>
+    <id>http://www.ccyyao.top/2016/12/13/H5-CSS3-P2.html</id>
+    <published>2016-12-13T10:57:38.000Z</published>
+    <updated>2016-12-13T12:46:34.169Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如同人类的的进化一样，CSS3是CSS2的“进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷。</p>
+<h3 id="CSS3-的现状"><a href="#CSS3-的现状" class="headerlink" title="CSS3 的现状"></a>CSS3 的现状</h3><pre><code>- 浏览器支持程度差，需要添加私有前缀
+- 移动端支持优于 pc 端
+- 不断改进中
+- 应用相对广泛
+</code></pre><h3 id="如何对待"><a href="#如何对待" class="headerlink" title="如何对待"></a>如何对待</h3><pre><code>- 坚持渐进增强原则
+- 考虑用户群体
+- 遵照产品的方案
+- 听 boss 的
+</code></pre><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="统一环境"><a href="#统一环境" class="headerlink" title="统一环境"></a>统一环境</h3><p>由于css3兼容性问题的普遍存在，为了避免因兼容性带来的干扰，我们约定统一的环境，以保证学习的效率，在最后会单独说明兼容性的问题。</p>
+<pre><code>- chrome 浏览器 version 46+
+- Firefox 浏览器 firefox 42+
+</code></pre><h3 id="如何使用手册"><a href="#如何使用手册" class="headerlink" title="如何使用手册"></a>如何使用手册</h3><p>学会使用工具，可以让我们事半功倍。</p>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[]</td>
+<td>全部可选项</td>
+</tr>
+<tr>
+<td>`</td>
+<td></td>
+<td>`</td>
+<td>并列</td>
+</tr>
+<tr>
+<td>`</td>
+<td>`</td>
+<td>多选一</td>
+</tr>
+<tr>
+<td>?</td>
+<td>0个或1个</td>
+</tr>
+<tr>
+<td>*</td>
+<td>0个或多个</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>范围</td>
+</tr>
+</tbody>
+</table>
+<h2 id="选择器："><a href="#选择器：" class="headerlink" title="选择器："></a>选择器：</h2><p>分为关系选择器，属性选择器，伪类选择器</p>
+<h3 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h3><pre><code>- 后代选择器 ul li 选择所有的后代元素
+- 子代选择器 ul&gt;li 选择.box 后面的一个li元素
+- 紧邻选择器 .box+li选择.box 后面的一个li 元素
+- 兄弟选择器 .box~li 选择 .box 后面所有的li元素
+</code></pre><h3 id="属性选择器：通过属性来选择对应的元素"><a href="#属性选择器：通过属性来选择对应的元素" class="headerlink" title="属性选择器：通过属性来选择对应的元素"></a>属性选择器：通过属性来选择对应的元素</h3><ul>
+<li>E[属性名]:选择所有的具备这个属性的E元素</li>
+<li>E[属性名=值]：选择所有的具备这个‘属性=对应值’的E元素</li>
+<li>E[属性名~=值]：选择所有的包含这个‘属性=对应值’的E元素css3 新增的</li>
+<li>E[属性名^=值]：从头去匹配这个‘属性=对应值’的E 元素</li>
+<li>E[属性名$=值]：从尾去匹配这个‘属性=对应值’的E 元素</li>
+<li>E[属性名*=值]：从任意位置去匹配这个‘属性=对应值’的E 元素</li>
+</ul>
+<h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><p><code>before  after  a：link</code></p>
+<ul>
+<li>E:first-child 从父级出发找到第一个孩子为E的元素（css2）</li>
+<li>E：last-child 从父级出发找到最后一个孩子为E的元素（css3）</li>
+<li>E：nth-child（N）从父级出发找到第N个孩子为E的元素（css3)</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;如同人类的的进化一样，CSS3是CSS2的“进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开
+    
+    </summary>
+    
+      <category term="HTML5+CSS3" scheme="http://www.ccyyao.top/categories/HTML5-CSS3/"/>
+    
+    
+      <category term="选择器" scheme="http://www.ccyyao.top/tags/%E9%80%89%E6%8B%A9%E5%99%A8/"/>
+    
+      <category term="伪元素 before after" scheme="http://www.ccyyao.top/tags/%E4%BC%AA%E5%85%83%E7%B4%A0-before-after/"/>
+    
+      <category term="字体用法" scheme="http://www.ccyyao.top/tags/%E5%AD%97%E4%BD%93%E7%94%A8%E6%B3%95/"/>
+    
+      <category term="圆角 阴影" scheme="http://www.ccyyao.top/tags/%E5%9C%86%E8%A7%92-%E9%98%B4%E5%BD%B1/"/>
+    
+      <category term="边框图片" scheme="http://www.ccyyao.top/tags/%E8%BE%B9%E6%A1%86%E5%9B%BE%E7%89%87/"/>
+    
+      <category term="渐变" scheme="http://www.ccyyao.top/tags/%E6%B8%90%E5%8F%98/"/>
+    
+  </entry>
   
   <entry>
     <title>nodejs_p2</title>
@@ -332,7 +433,7 @@
     <link href="http://www.ccyyao.top/2016/12/12/nodejs-p3.html"/>
     <id>http://www.ccyyao.top/2016/12/12/nodejs-p3.html</id>
     <published>2016-12-12T11:01:28.000Z</published>
-    <updated>2016-12-12T11:16:44.625Z</updated>
+    <updated>2016-12-13T10:43:58.003Z</updated>
     
     <content type="html"><![CDATA[<h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><p>nodejs中没有dom，没有bom</p>
 <ul>
