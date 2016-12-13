@@ -3,17 +3,45 @@
 <head>
   <meta charset="utf-8">
   
-  <title>等待！！！</title>
+  <title>nodejs_p1 | 等待！！！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="It is not what you do that really counts.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="等待！！！">
-<meta property="og:url" content="http://www.ccyyao.top/index.html">
+  <meta name="description" content="nodeJS 基础了解
+模块化！
+node(让我们熟悉前后端交互！)
+压轴!6个人!(就业!) 移动App(手机软件!,微信,qq), （移动Web,运行浏览器中的）
+
+
+1.非模块化的方式!
+全局变量的问题:
+1.容易有冲突，会污染全局环境！
+2.js引用引用顺序很重要！张三: var zhangsan={name,city}李四: var lisi = {name:xx,city:’xxx’}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs_p1">
+<meta property="og:url" content="http://www.ccyyao.top/2016/12/13/nodejs-p1.html">
 <meta property="og:site_name" content="等待！！！">
-<meta property="og:description" content="It is not what you do that really counts.">
+<meta property="og:description" content="nodeJS 基础了解
+模块化！
+node(让我们熟悉前后端交互！)
+压轴!6个人!(就业!) 移动App(手机软件!,微信,qq), （移动Web,运行浏览器中的）
+
+
+1.非模块化的方式!
+全局变量的问题:
+1.容易有冲突，会污染全局环境！
+2.js引用引用顺序很重要！张三: var zhangsan={name,city}李四: var lisi = {name:xx,city:’xxx’}">
+<meta property="og:updated_time" content="2016-12-13T01:22:52.351Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="等待！！！">
-<meta name="twitter:description" content="It is not what you do that really counts.">
+<meta name="twitter:title" content="nodejs_p1">
+<meta name="twitter:description" content="nodeJS 基础了解
+模块化！
+node(让我们熟悉前后端交互！)
+压轴!6个人!(就业!) 移动App(手机软件!,微信,qq), （移动Web,运行浏览器中的）
+
+
+1.非模块化的方式!
+全局变量的问题:
+1.容易有冲突，会污染全局环境！
+2.js引用引用顺序很重要！张三: var zhangsan={name,city}李四: var lisi = {name:xx,city:’xxx’}">
   
     <link rel="alternative" href="/atom.xml" title="等待！！！" type="application/atom+xml">
   
@@ -27,9 +55,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -41,8 +66,8 @@
           rootUrl: '/',
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -224,9 +249,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-nodejs-p1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-nodejs-p1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/12/13/nodejs-p1.html" class="article-date">
@@ -242,12 +265,27 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/nodejs-p1.html">nodejs_p1</a>
+    <h1 class="article-title" itemprop="name">
+      nodejs_p1
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/nodeJS/">nodeJS</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/关于自执行函数/">关于自执行函数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/快速开始/">快速开始</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块化规范/">模块化规范</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/非模块化的方式/">非模块化的方式</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -386,688 +424,147 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/nodeJS/">nodeJS</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/关于自执行函数/">关于自执行函数</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/快速开始/">快速开始</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块化规范/">模块化规范</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/非模块化的方式/">非模块化的方式</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-nodejs-p3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/12/nodejs-p3.html" class="article-date">
-      <time datetime="2016-12-12T11:01:28.000Z" itemprop="datePublished">2016-12-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/12/nodejs-p3.html">nodejs_p3</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="node"><a href="#node" class="headerlink" title="node"></a>node</h1><p>nodejs中没有dom，没有bom</p>
-<ul>
-<li>一个文件就是一个模块。<ul>
-<li>文件是定义的变量，只能在这个文件中使用。</li>
-</ul>
-</li>
-<li>作用域</li>
-<li>node只需要自己一个人就是可以当服务器软件<ul>
-<li>node中代码，可以接收前端浏览器发来的请求，并返回相应的数据。</li>
-</ul>
-</li>
-</ul>
-<h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><ul>
-<li>是node 的核心模块</li>
-<li>node 模块：<ul>
-<li>核心模块（只要安装了node就会有的模块，已经被打包了node.exe文件）</li>
-<li>自定义模块（我们自己写的js模块）</li>
-<li>第三方的模块（包）</li>
-</ul>
-</li>
-<li>我们之前前端用ajax发http请求</li>
-</ul>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/nodeJS/">nodeJS</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fs-未见操作模块/">fs 未见操作模块</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url-模块/">url 模块</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/12/12/nodejs-p3.html#more">点我看更多 >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/12/13/nodejs-p1.html">nodejs_p1</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YY 的个人博客">YY</a></p>
+        <p><span>发布时间:</span>2016年12月13日 - 09时14分</p>
+        <p><span>最后更新:</span>2016年12月13日 - 09时22分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/12/13/nodejs-p1.html" title="nodejs_p1">http://www.ccyyao.top/2016/12/13/nodejs-p1.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.ccyyao.top/2016/12/13/nodejs-p1.html　　作者: YY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-H5+CSS3-p1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/10/H5+CSS3-p1.html" class="article-date">
-      <time datetime="2016-12-10T10:50:32.000Z" itemprop="datePublished">2016-12-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/10/H5+CSS3-p1.html">H5和CSS3基础语法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="html5-基础语法"><a href="#html5-基础语法" class="headerlink" title="html5 基础语法"></a>html5 基础语法</h1><h2 id="html5-新增标签"><a href="#html5-新增标签" class="headerlink" title="html5 新增标签"></a>html5 新增标签</h2><ul>
-<li>header 头部</li>
-<li>aside 侧边栏</li>
-<li>nav 导航</li>
-<li>footer 页脚</li>
-<li>article 文章页</li>
-<li>section 区块</li>
-<li>作用：添加了语义性更加利于SEO优化</li>
-</ul>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/HTML5-CSS3/">HTML5+CSS3</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5新增标签/">html5新增标签</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/新增表单/">新增表单</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/添加视频方式/">添加视频方式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/添加音频/">添加音频</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/12/10/H5+CSS3-p1.html#more">点我看更多 >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/12/nodejs-p3.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nodejs_p3</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#nodeJS-基础"><span class="toc-number">1.</span> <span class="toc-text">nodeJS 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#了解"><span class="toc-number">1.1.</span> <span class="toc-text">了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-非模块化的方式"><span class="toc-number">1.2.</span> <span class="toc-text">1.非模块化的方式!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-解决方式"><span class="toc-number">1.3.</span> <span class="toc-text">2.解决方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-命名空间"><span class="toc-number">1.3.1.</span> <span class="toc-text">2.1 命名空间!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-私有命名空间"><span class="toc-number">1.3.2.</span> <span class="toc-text">2.1 私有命名空间!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-封闭原则-千万不要改源码"><span class="toc-number">1.3.3.</span> <span class="toc-text">2.3 封闭原则(千万不要改源码!)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#度"><span class="toc-number">1.4.</span> <span class="toc-text">度!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端东西太多！"><span class="toc-number">1.5.</span> <span class="toc-text">前端东西太多！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块化规范"><span class="toc-number">1.6.</span> <span class="toc-text">模块化规范!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-非模块化的方式-1"><span class="toc-number">1.7.</span> <span class="toc-text">1. 非模块化的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-相关规范"><span class="toc-number">1.8.</span> <span class="toc-text">2. 相关规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-CMD-前端模块化规范"><span class="toc-number">1.8.1.</span> <span class="toc-text">2.1 CMD (前端模块化规范)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-AMD-前端模块化规范"><span class="toc-number">1.8.2.</span> <span class="toc-text">2.2 AMD (前端模块化规范)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-seajs"><span class="toc-number">1.9.</span> <span class="toc-text">3. seajs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-快速开始"><span class="toc-number">1.9.1.</span> <span class="toc-text">3.1 快速开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意堆和栈"><span class="toc-number">1.9.2.</span> <span class="toc-text">注意堆和栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-seajs-use"><span class="toc-number">1.9.3.</span> <span class="toc-text">3.2 seajs.use</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#requireJS"><span class="toc-number">1.10.</span> <span class="toc-text">requireJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#seajs是"><span class="toc-number">1.11.</span> <span class="toc-text">seajs是</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#扩展！"><span class="toc-number">2.</span> <span class="toc-text">扩展！</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sublime代码段"><span class="toc-number">2.1.</span> <span class="toc-text">sublime代码段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#命令行"><span class="toc-number">2.2.</span> <span class="toc-text">命令行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于自执行函数"><span class="toc-number">2.3.</span> <span class="toc-text">关于自执行函数!</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-    <article id="post-jQuery-three" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/01/jQuery-three.html" class="article-date">
-      <time datetime="2016-12-01T08:20:09.000Z" itemprop="datePublished">2016-12-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2016/12/13/nodejs-p1.html" data-title="nodejs_p1" data-url="http://www.ccyyao.top/2016/12/13/nodejs-p1.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yyao"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/01/jQuery-three.html">jQuery 基础课程—jQuery其他必备知识</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="jQuery-基础课程—jQuery其他必备知识"><a href="#jQuery-基础课程—jQuery其他必备知识" class="headerlink" title="jQuery 基础课程—jQuery其他必备知识"></a>jQuery 基础课程—jQuery其他必备知识</h1><h2 id="jQuery-操作-DOM"><a href="#jQuery-操作-DOM" class="headerlink" title="jQuery 操作 DOM"></a>jQuery 操作 DOM</h2><h3 id="jQuery-操作属性"><a href="#jQuery-操作属性" class="headerlink" title="jQuery 操作属性"></a>jQuery 操作属性</h3><ul>
-<li>设置单个属性</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//第一个参数，需要设置的属性名</span></div><div class="line"><span class="comment">//第二个参数，对应的属性值</span></div><div class="line">attr(name,value);</div><div class="line"><span class="comment">//用法举例</span></div><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"title"</span>,<span class="string">"呵呵"</span>);</div><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"alt"</span>,<span class="string">"呵呵"</span>);</div></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQueryde的DOM操作/">jQueryde的DOM操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery事件/">jQuery事件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件机制/">jQuery插件机制</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery补充/">jQuery补充</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/12/01/jQuery-three.html#more">点我看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-jQuery-two" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/29/jQuery-two.html" class="article-date">
-      <time datetime="2016-11-29T11:09:47.000Z" itemprop="datePublished">2016-11-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/29/jQuery-two.html">jQuery 基础课程—jQuery操作DOM</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="jQuery-基础课程—jQuery操作DOM"><a href="#jQuery-基础课程—jQuery操作DOM" class="headerlink" title="jQuery 基础课程—jQuery操作DOM"></a>jQuery 基础课程—jQuery操作DOM</h1><h2 id="jQuery-操作样式"><a href="#jQuery-操作样式" class="headerlink" title="jQuery 操作样式"></a>jQuery 操作样式</h2><h3 id="css-操作（很重要）"><a href="#css-操作（很重要）" class="headerlink" title="css 操作（很重要）"></a>css 操作（很重要）</h3><ul>
-<li>功能：设置或者修改样式，操作的是 style 属性。</li>
-</ul>
-<ul>
-<li>设置单个样式</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// name:需要设置的样式名称</span></div><div class="line"><span class="comment">// value:对应的样式值</span></div><div class="line">css(name,value);</div><div class="line"><span class="comment">//使用案例</span></div><div class="line">$(<span class="string">"#one"</span>).css(<span class="string">"background"</span>,<span class="string">"gray"</span>); <span class="comment">//将背景修改为灰色</span></div></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM节点/">DOM节点</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/class操作/">class操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css操作/">css操作</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery动画/">jQuery动画</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery操作/">jQuery操作</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/11/29/jQuery-two.html#more">点我看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-jQuery-one" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/28/jQuery-one.html" class="article-date">
-      <time datetime="2016-11-28T06:45:57.000Z" itemprop="datePublished">2016-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/28/jQuery-one.html">jQuery 基础</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="jQuery-基础"><a href="#jQuery-基础" class="headerlink" title="jQuery 基础"></a>jQuery 基础</h1><h2 id="jQuery-介绍"><a href="#jQuery-介绍" class="headerlink" title="jQuery 介绍"></a>jQuery 介绍</h2><h3 id="jQuery-初识"><a href="#jQuery-初识" class="headerlink" title="jQuery 初识"></a>jQuery 初识</h3><ul>
-<li>jQuery 让js的开发变得更加简单</li>
-<li>jQUery 解决了浏览器的兼容问题</li>
-</ul>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/jQuery/">jQuery</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery介绍/">jQuery介绍</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery概念/">jQuery概念</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery详细解释/">jQuery详细解释</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery选择器/">jQuery选择器</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/11/28/jQuery-one.html#more">点我看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-markdown-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/27/markdown-1.html" class="article-date">
-      <time datetime="2016-11-27T02:05:33.000Z" itemprop="datePublished">2016-11-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <a href="/2016/12/12/nodejs-p3.html" title="下一篇: nodejs_p3">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/27/markdown-1.html">Markdown 使用指南</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><ul>
-<li>Markdown</li>
-<li>SVN</li>
-<li>Git<ul>
-<li>shell<br>+vi 编辑器</li>
-</ul>
-</li>
-<li>NPM</li>
-<li>bower</li>
-<li>AngularJS</li>
-<li>gulp</li>
-</ul>
-<blockquote>
-<p>总而言之，这是一门教你程序员如何装 x 的技能，一起 get 吧。</p>
-</blockquote>
-          
-      
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Markdown/">Markdown</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具使用/">工具使用</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/11/27/markdown-1.html#more">点我看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/13/nodejs-p1.html">nodejs_p1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/nodejs-p3.html">nodejs_p3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/H5+CSS3-p1.html">H5和CSS3基础语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/01/jQuery-three.html">jQuery 基础课程—jQuery其他必备知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/29/jQuery-two.html">jQuery 基础课程—jQuery操作DOM</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/28/jQuery-one.html">jQuery 基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/markdown-1.html">Markdown 使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/20/javascript-advamud.html">JS高级知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/about_themes.html">关于主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/hello-world.html">Hello World</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
 
 
-
-
-
-
-
-
-  
-    <article id="post-javascript-advamud" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/20/javascript-advamud.html" class="article-date">
-      <time datetime="2016-11-20T12:27:56.000Z" itemprop="datePublished">2016-11-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <script>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/20/javascript-advamud.html">JS高级知识总结</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="JavaScript高级知识总结"><a href="#JavaScript高级知识总结" class="headerlink" title="JavaScript高级知识总结"></a>JavaScript高级知识总结</h1><h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>递归就是函数自己直接或者间接的调用自己</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS递归/">JS递归</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS闭包/">JS闭包</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/严格模式/">严格模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事件兼容性处理/">事件兼容性处理</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/沙箱模式/">沙箱模式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/缓存/">缓存</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/11/20/javascript-advamud.html#more">点我看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-about_themes" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/17/about_themes.html" class="article-date">
-      <time datetime="2016-11-17T11:55:51.000Z" itemprop="datePublished">2016-11-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/17/about_themes.html">关于主题</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>　　<strong> SPFK Hexo 主题：</strong>用了yilia主题一段时间，感觉还有很多可以提高的地方，就查阅资料，对其进行粗类的修改，但是，有其实还有很多不完善的地方，欢迎大家前捧场。<br>没想到，这么多人喜欢黑色版本的，建议不是每个人都喜欢我的这些功能，所以准备个基础版本，插件可以看教程自行安装。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo主题/">Hexo主题</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/11/17/about_themes.html#more">点我看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/11/12/hello-world.html" class="article-date">
-      <time datetime="2016-11-12T01:54:24.550Z" itemprop="datePublished">2016-11-12</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/12/hello-world.html">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/11/12/hello-world.html#more">点我看更多 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
