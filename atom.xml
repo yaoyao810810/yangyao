@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ccyyao.top/"/>
-  <updated>2016-12-22T07:14:12.953Z</updated>
+  <updated>2016-12-22T07:17:33.152Z</updated>
   <id>http://www.ccyyao.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.ccyyao.top/2016/12/13/H5-CSS3-P2.html"/>
     <id>http://www.ccyyao.top/2016/12/13/H5-CSS3-P2.html</id>
     <published>2016-12-13T10:57:38.000Z</published>
-    <updated>2016-12-22T07:14:12.953Z</updated>
+    <updated>2016-12-22T07:17:33.152Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如同人类的的进化一样，CSS3是CSS2的“进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷。</p>
 <h3 id="CSS3-的现状"><a href="#CSS3-的现状" class="headerlink" title="CSS3 的现状"></a>CSS3 的现状</h3><pre><code>- 浏览器支持程度差，需要添加私有前缀
@@ -49,14 +49,14 @@
 <td>全部可选项</td>
 </tr>
 <tr>
-<td>`</td>
+<td>“</td>
 <td></td>
-<td>`</td>
+<td>“</td>
 <td>并列</td>
 </tr>
 <tr>
-<td>`</td>
-<td>`</td>
+<td>“</td>
+<td>“</td>
 <td>多选一</td>
 </tr>
 <tr>
