@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ccyyao.top/"/>
-  <updated>2016-12-13T12:46:34.169Z</updated>
+  <updated>2016-12-22T07:14:12.953Z</updated>
   <id>http://www.ccyyao.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.ccyyao.top/2016/12/13/H5-CSS3-P2.html"/>
     <id>http://www.ccyyao.top/2016/12/13/H5-CSS3-P2.html</id>
     <published>2016-12-13T10:57:38.000Z</published>
-    <updated>2016-12-13T12:46:34.169Z</updated>
+    <updated>2016-12-22T07:14:12.953Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>如同人类的的进化一样，CSS3是CSS2的“进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷。</p>
 <h3 id="CSS3-的现状"><a href="#CSS3-的现状" class="headerlink" title="CSS3 的现状"></a>CSS3 的现状</h3><pre><code>- 浏览器支持程度差，需要添加私有前缀
@@ -31,7 +31,8 @@
 - 考虑用户群体
 - 遵照产品的方案
 - 听 boss 的
-</code></pre><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="统一环境"><a href="#统一环境" class="headerlink" title="统一环境"></a>统一环境</h3><p>由于css3兼容性问题的普遍存在，为了避免因兼容性带来的干扰，我们约定统一的环境，以保证学习的效率，在最后会单独说明兼容性的问题。</p>
+</code></pre><a id="more"></a>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="统一环境"><a href="#统一环境" class="headerlink" title="统一环境"></a>统一环境</h3><p>由于css3兼容性问题的普遍存在，为了避免因兼容性带来的干扰，我们约定统一的环境，以保证学习的效率，在最后会单独说明兼容性的问题。</p>
 <pre><code>- chrome 浏览器 version 46+
 - Firefox 浏览器 firefox 42+
 </code></pre><h3 id="如何使用手册"><a href="#如何使用手册" class="headerlink" title="如何使用手册"></a>如何使用手册</h3><p>学会使用工具，可以让我们事半功倍。</p>
@@ -72,6 +73,7 @@
 </tr>
 </tbody>
 </table>
+<hr>
 <h2 id="选择器："><a href="#选择器：" class="headerlink" title="选择器："></a>选择器：</h2><p>分为关系选择器，属性选择器，伪类选择器</p>
 <h3 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h3><pre><code>- 后代选择器 ul li 选择所有的后代元素
 - 子代选择器 ul&gt;li 选择.box 后面的一个li元素
@@ -90,12 +92,122 @@
 <li>E:first-child 从父级出发找到第一个孩子为E的元素（css2）</li>
 <li>E：last-child 从父级出发找到最后一个孩子为E的元素（css3）</li>
 <li>E：nth-child（N）从父级出发找到第N个孩子为E的元素（css3)</li>
+<li>小知识：<ul>
+<li>even 控制偶数   odd 控制奇数</li>
+<li>nth-child() 特别类似的一个选择器 nth-of-type()</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他选择器"><a href="#其他选择器" class="headerlink" title="其他选择器"></a>其他选择器</h3><ul>
+<li>input:focus{}       选择获取焦点的表单</li>
+<li>input:enabled{}     选择可操控的表单元素</li>
+<li>input:disabled{}    选择不可操控的表单</li>
+<li>E:target{}          选择通过锚点跳转的当前E 元素</li>
+<li>E:empty{}           选择没有字节点的E 元素包括文本节点</li>
+<li>Input:checked       选择被选中的 checkbox 表单</li>
+</ul>
+<hr>
+<h2 id="伪元素-before-after"><a href="#伪元素-before-after" class="headerlink" title="伪元素 before after"></a>伪元素 before after</h2><p>作用：渲染一个虚拟的标签插入到当前元素的内部的前面或者后面<br>总结：</p>
+<ul>
+<li>伪元素默认是行内元素，我们可以进行转化，在实际工作中，多用来模拟一些小的标签去装饰</li>
+<li>因为伪元素是不存在的，所以不能直接用 JS 去获取（可以利用类去覆盖之前的样式）</li>
+<li>清除浮动的底层原理：就是让一个伪元素（因为伪元素不占dom内存）去清除浮动，从而节约了dom内存</li>
+<li>text-indent 针对伪类不起作用</li>
+<li>当伪类需要配合 iconfont 去使用的话需要打开 iconfont.css 拿到 content 里面对应的值</li>
+<li>当伪元素需要 hover 的效果的时候不能直接 hover 需要借助于父级 写法：<code>父级：hover：伪元素</code></li>
+<li>content 一定不能省略，即使里面没有内容</li>
+</ul>
+<h2 id="字体的用法"><a href="#字体的用法" class="headerlink" title="字体的用法"></a>字体的用法</h2><p>网址：<code>http://www.iconfont.cn/</code> 阿里<br><code>http://www.youziku.com/</code> 有字库<br>兼容：支持所有的浏览器<br><img src="http://www.ccyyao.top/images/webfont1.png" alt="文字样式"></p>
+<hr>
+<h2 id="圆角"><a href="#圆角" class="headerlink" title="圆角"></a>圆角</h2><p><code>broder-radius:值</code><br><img src="http://www.ccyyao.top/images/yuanjiaotu.png" alt="圆角图"><br><img src="http://www.ccyyao.top/images/yuanjiaotu2.png" alt="圆角图"></p>
+<ul>
+<li>一个值设置的是盒子的四个角的水平和垂直半径</li>
+<li>每个角都可以单独进行设置，其取值顺序是左上 右上 右下 左下顺时针设置</li>
+<li>可以简写 简写的逻辑跟 padding 和 margin 一样</li>
+<li>单位支持像素，和百分比（参照的是宽度和高度）</li>
+<li>可以用水平半径/垂直半径 去单独控制半径 并且每一个半径都可以单独控制</li>
+</ul>
+<h2 id="阴影"><a href="#阴影" class="headerlink" title="阴影"></a>阴影</h2><p><code>语法：box-shadow:值</code><br>值说明：</p>
+<ul>
+<li>第一个值：N px 阴影向水平方向偏移N 个像素 正数往右 负数往左</li>
+<li>第二个值：N px 阴影向垂直方向偏移N 个像素 正数往下 负数往上</li>
+<li>第三个值：羽化大小(模糊的大小)</li>
+<li>第四个值：阴影尺寸大小</li>
+<li>第五个值：颜色 默认是黑色</li>
+<li>第六个值：内外阴影 默认是外阴影 内阴影是 inset</li>
+<li>阴影可以写多个，中间用逗号隔开</li>
+<li>阴影可以简写，但是需要注意有一些值需要补0</li>
+</ul>
+<p>文字阴影</p>
+<blockquote>
+<p>语法：text-shadow:水平偏移 垂直偏移 羽化大小 颜色</p>
+</blockquote>
+<h2 id="边框图片"><a href="#边框图片" class="headerlink" title="边框图片"></a>边框图片</h2><blockquote>
+<p>语法：border-image:值。   遵从的是九宫格式切图，上下左右分别来一刀</p>
+</blockquote>
+<p>值说明：</p>
+<ul>
+<li>border-image-source:url(‘border.png’):图片路径</li>
+<li>border-image-slice:26 图片切割，不要带单位，遵从九宫格式切图法（上下左右各来一刀）</li>
+<li>border-image-repeat:round 或者 stretch 或者 repeat round 没有瑕疵， stretch 默认拉伸， repeat 平铺 有瑕疵</li>
+<li>简写：border-image：url(‘border.png’) 26 round;</li>
+</ul>
+<hr>
+<h2 id="背景系列"><a href="#背景系列" class="headerlink" title="背景系列"></a>背景系列</h2><h3 id="背景图片的基准点"><a href="#背景图片的基准点" class="headerlink" title="背景图片的基准点"></a>背景图片的基准点</h3><blockquote>
+<p>语法：background-origin：值<br>值说明：</p>
+<ul>
+<li>border-box:忽略边框，直接从边框的起始0,0点平铺</li>
+<li>padding-box:默认值，忽略 padding 直接从padding 的起始0,0点平铺</li>
+<li>content-box：从内容部分开始平铺 跟 padding有关系</li>
+</ul>
+</blockquote>
+<h3 id="多重背景"><a href="#多重背景" class="headerlink" title="多重背景"></a>多重背景</h3><p>说明：背景图片之间用逗号隔开，可以写多组，最先渲染的图片有可能会遮住后面渲染的图片</p>
+<h3 id="控制背景图片的大小"><a href="#控制背景图片的大小" class="headerlink" title="控制背景图片的大小"></a>控制背景图片的大小</h3><blockquote>
+<p>语法： background-size：值<br>值说明：</p>
+<ul>
+<li>当只有一个值的情况下，宽度实现拉伸，并且高度会保持等比例，可以支持px，也可以支持百分比，百分比参照的是这个盒子本身的宽度</li>
+<li>当有两个值的情况下，宽度和高度会分别拉伸到对应的值，可能会变形，可以支持px，也可以支持百分比，百分比参照的是这个盒子本身的宽度</li>
+<li>contain 当图片的宽度或者是高度在缩放的时候域一个 碰到 了盒子的边缘，则停止变化</li>
+<li>contain 的基础上保证不留白，这就是cover的效果</li>
+</ul>
+</blockquote>
+<h2 id="盒子内减"><a href="#盒子内减" class="headerlink" title="盒子内减"></a>盒子内减</h2><p>之前盒子的实际宽是 实际宽度=width+padding+border， 而内减属性会自动帮我们 padding 和 border 值，所以用了内减的盒子实际宽度就等于width，至于 padding 和 border 的值会自动被 width 内减</p>
+<hr>
+<h2 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h2><h3 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h3><blockquote>
+<p>background:-webkit-linear-gradient(起始位置，颜色一 位置，颜色二 位置…)</p>
+<ul>
+<li>需要添加私有前缀</li>
+<li>起始 位置建议用方位名词去控制</li>
+</ul>
+</blockquote>
+<h3 id="径向渐变"><a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h3><blockquote>
+<p>background:-webkit-radial-gradient(起始位置，颜色一 位置，颜色二 位置…)</p>
+<ul>
+<li>起始位置可以是方位名词 也可以是角度，角度主要是渐变线的角度，渐变线默认是水平方向 箭头朝右，正值逆时针旋转 负数反之（线性渐变）</li>
+<li>不支持角度 支持像素和方位名词（径向渐变）</li>
+</ul>
+</blockquote>
+<h3 id="私有前缀"><a href="#私有前缀" class="headerlink" title="私有前缀"></a>私有前缀</h3><p>每一天css3属性合理来说都需要添加对应浏览器的前缀，以保证其兼容性</p>
+<ul>
+<li>谷歌 苹果：-webkit-</li>
+<li>火狐 ：-moz-</li>
+<li>IE ：-ms-</li>
+<li>o ：-o-<br>小细节：在手机端，一般来说只需要写一个-webkit-（针对国内的绝大部分手机端）添加的位置：大部分都是直接添加到最前面，css 没有的属性都是添加在最前面的，有一些事css2 就有的属性是添加在后面的（background：-wibkit-linear-gradient（））</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;如同人类的的进化一样，CSS3是CSS2的“进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;如同人类的的进化一样，CSS3是CSS2的“进化”版本，在CSS2基础上，增强或新增了许多特性， 弥补了CSS2的众多不足之处，使得Web开发变得更为高效和便捷。&lt;/p&gt;
+&lt;h3 id=&quot;CSS3-的现状&quot;&gt;&lt;a href=&quot;#CSS3-的现状&quot; class=&quot;headerlink&quot; title=&quot;CSS3 的现状&quot;&gt;&lt;/a&gt;CSS3 的现状&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;- 浏览器支持程度差，需要添加私有前缀
+- 移动端支持优于 pc 端
+- 不断改进中
+- 应用相对广泛
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;如何对待&quot;&gt;&lt;a href=&quot;#如何对待&quot; class=&quot;headerlink&quot; title=&quot;如何对待&quot;&gt;&lt;/a&gt;如何对待&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;- 坚持渐进增强原则
+- 考虑用户群体
+- 遵照产品的方案
+- 听 boss 的
+&lt;/code&gt;&lt;/pre&gt;
     
     </summary>
     
