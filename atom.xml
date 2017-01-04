@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ccyyao.top/"/>
-  <updated>2017-01-03T02:36:55.542Z</updated>
+  <updated>2017-01-04T02:25:52.519Z</updated>
   <id>http://www.ccyyao.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.ccyyao.top/2017/01/03/JavaScript-ZHFF.html"/>
     <id>http://www.ccyyao.top/2017/01/03/JavaScript-ZHFF.html</id>
     <published>2017-01-03T01:20:36.000Z</published>
-    <updated>2017-01-03T02:36:55.542Z</updated>
+    <updated>2017-01-04T02:25:52.519Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数组的转换方法"><a href="#数组的转换方法" class="headerlink" title="数组的转换方法"></a>数组的转换方法</h1><h2 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h2><p>arr.join(字符串)，使用字符串连接数组的每一个元素，返回一个字符串，不改变原数组。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//join 方法 不会改变原有的数组</span></div><div class="line"><span class="built_in">console</span>.log(arr.join(<span class="string">"-"</span>)); <span class="comment">//1-2-3</span></div><div class="line"><span class="built_in">console</span>.log(arr.join());    <span class="comment">//1,2,3</span></div><div class="line"><span class="built_in">console</span>.log(arr.join(<span class="string">""</span>));  <span class="comment">//123</span></div></pre></td></tr></table></figure></p>
 <a id="more"></a>
@@ -59,6 +59,37 @@
 </li>
 </ul>
 <hr>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>基本操作：</p>
+<ul>
+<li>str.length 可以获取字符串的字符个数</li>
+<li>str[索引] 获取指定位置的字符 html5 提供 IE 低版本不支持</li>
+<li>str.charAt(索引) 获取指定索引位置的字符</li>
+<li>str.charCodeAt(索引) 获取字符的 ASCLL 码</li>
+</ul>
+<p>操作方法：</p>
+<ul>
+<li>str.concat() 用于连接字符串，一般使用 + 操作</li>
+<li>str.slice(start,end) 与 slice 基本相同，一般使用 slice</li>
+<li>str.substr(start,len) 表示从索引 start 开始，取 len 个字符，并返回。</li>
+</ul>
+<p>替换方法：</p>
+<ul>
+<li>str.replace(value,rep) 表示找到 str 中 value 的部分，替换为 rep 并返回。</li>
+</ul>
+<p>位置方法：</p>
+<ul>
+<li>str.indexOf(要查找的字符，索引) 使用方式与数组 indexOf 相同</li>
+<li>str.lastindexOf() 与 indexOf 获取方向相反</li>
+</ul>
+<p>大小写转换：</p>
+<ul>
+<li>str.toUpperCase() 将字符串转换为大写形式</li>
+<li>str.toLowerCase() 将字符传转换为小写形式</li>
+</ul>
+<p>转换方法：</p>
+<ul>
+<li>str.split(字符串); 安照传入的字符串分割 str ，分割为一个数组。</li>
+</ul>
 ]]></content>
     
     <summary type="html">
@@ -77,6 +108,8 @@
       <category term="操作方法" scheme="http://www.ccyyao.top/tags/%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
     
       <category term="Date对象" scheme="http://www.ccyyao.top/tags/Date%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="字符串" scheme="http://www.ccyyao.top/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
