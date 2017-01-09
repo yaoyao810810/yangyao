@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ccyyao.top/"/>
-  <updated>2017-01-04T02:25:52.519Z</updated>
+  <updated>2017-01-09T12:52:19.246Z</updated>
   <id>http://www.ccyyao.top/</id>
   
   <author>
@@ -14,6 +14,210 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP服务和Ajax编程</title>
+    <link href="http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html"/>
+    <id>http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html</id>
+    <published>2017-01-09T03:15:08.000Z</published>
+    <updated>2017-01-09T12:52:19.246Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><blockquote>
+<p>能够提供某种服务的机器（计算机）称为服务器。</p>
+</blockquote>
+<h2 id="服务器类型"><a href="#服务器类型" class="headerlink" title="服务器类型"></a>服务器类型</h2><p>按照不同的划分标准，服务可划分为以下类型：</p>
+<ul>
+<li>按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；</li>
+<li>按操作系统可分为：Linux 服务器、 Windows 服务器等；</li>
+<li>按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。</li>
+</ul>
+<a id="more"></a>
+<h2 id="服务器软件"><a href="#服务器软件" class="headerlink" title="服务器软件"></a>服务器软件</h2><p>使计算机具备提供某种服务能力的应用软件，称为服务器软件，通过安装响应的服务软件，然后进行配置后就可以使计算机具备了提供某种服务的能力。</p>
+<ul>
+<li>常见的服务器软件有：<ul>
+<li>文件服务器：Server-U、FileZilla、VsFTP 等；</li>
+<li>数据库服务器：Oracle、MySQL、PostgreSQL、MSSQL 等；</li>
+<li>邮件服务器：Postfix、Sendmail 等；</li>
+<li>HTTP 服务器：Apache、Nginx、IIS、Tomcat、NodeJS 等；</li>
+</ul>
+</li>
+</ul>
+<h2 id="HTTP-服务器"><a href="#HTTP-服务器" class="headerlink" title="HTTP 服务器"></a>HTTP 服务器</h2><ul>
+<li>即网站服务器，主要提供文档（文本、图片、视频、音频）浏览服务，一般安装 Apache、Nginx 服务器软件。</li>
+<li>HTTP服务器可以结合某一编程语言处理业务逻辑，由此进行的开发，同常称为服务端开发。</li>
+<li>常见的运行在服务端的编程语言包括 PHP、Jsp、Asp、Python、Ruby、Perl 等。</li>
+</ul>
+<hr>
+<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><ul>
+<li>具有向服务器索取服务能力的终端，比如：手机、电脑等，通过安装不同的客户端软件，可以获取不同的服务，比如通过QQ获得即时通讯服务、通过迅雷获得下载服务等。</li>
+<li>常见的客户端软件：浏览器、QQ、迅雷、Foxmail 等。</li>
+<li>以浏览器为宿主环境，结合 HTML、CSS、JavaScript 等技术，而进行的一系列开发，通常称为前端开发。</li>
+</ul>
+<h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="IP-地址"><a href="#IP-地址" class="headerlink" title="IP 地址"></a>IP 地址</h2><p>所谓 IP 地址就是给每个连接在互联网上的主机分配的一个32位地址，（查看本机IP地址：ping、ipconfig、ifconfig）</p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>由于IP 地址基于数字，不方便记忆，于是便用域名来代替 IP 地址，域名是一个 IP 地址的“面具”（查看域名对应IP地址：ping、tracert）</p>
+<h2 id="DNS-服务"><a href="#DNS-服务" class="headerlink" title="DNS 服务"></a>DNS 服务</h2><p>DNS 记录了IP地址和域名的映射（对应）关系；（查找优先级 本机 hosts文件、DNS 服务器）</p>
+<h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>端口号是计算机与外界通讯交流的出口，每个段都对应不同的服务，现实生活中，银行不同的窗口办理不同的业务，（查看端口占用情况：netstat -an）常见的端口号：80、8080/21/22</p>
+<hr>
+<h1 id="C-S-和-B-S"><a href="#C-S-和-B-S" class="headerlink" title="C/S 和 B/S"></a>C/S 和 B/S</h1><h2 id="C-S-结构"><a href="#C-S-结构" class="headerlink" title="C/S 结构"></a>C/S 结构</h2><p>即 <code>Client</code> <code>Server</code><br><img src="(http://www.ccyyao.top/images/C S.jpg" alt="C/S图片"><br>在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。</p>
+<h2 id="B-S-结构"><a href="#B-S-结构" class="headerlink" title="B/S 结构"></a>B/S 结构</h2><p>B/S（即Broswer、Server）解决了C/S所带来的不便，将所有的服务都可以通过浏览器来完成（因为基本所有浏览器都安装了浏览器），但B/S也有一些不利，比如操作稳定性、流畅度等方面相对较弱。</p>
+<hr>
+<h1 id="搭建-HTTP-服务"><a href="#搭建-HTTP-服务" class="headerlink" title="搭建 HTTP 服务"></a>搭建 HTTP 服务</h1><p>Windows + Apache + Mysql + PHP，首字母组合。</p>
+<h2 id="安装-Wamp-Server"><a href="#安装-Wamp-Server" class="headerlink" title="安装 Wamp Server"></a>安装 Wamp Server</h2><p>安装 wampserver，和普通软件安装无差别，除指定安装路径外，其它默认安装。</p>
+<h2 id="管理-HTTP-服务"><a href="#管理-HTTP-服务" class="headerlink" title="管理 HTTP 服务"></a>管理 HTTP 服务</h2><p>任务图标绿色为正常启动状态<br>通过图形控制台可以启动、重启、停止所有服务  </p>
+<p><img src="(http://www.ccyyao.top/images/http a.jpg" alt="http图片"></p>
+<p>或者单独启动、重启、停止特定服务  </p>
+<p><img src="(http://www.ccyyao.top/images/http b.jpg" alt="http图片">  </p>
+<p>注意事项：</p>
+<ul>
+<li>检查网络是不是通的 ping 对方 IP</li>
+<li>检查防火墙是否开启，如果开启将不能正常被访问</li>
+<li>检查访问权限 Allow from all</li>
+<li>理解默认索引</li>
+<li>确保端口没有被其他程序占用</li>
+<li>“#”表示注释</li>
+<li>修改配置要格外小心，禁止无意修改其他内容</li>
+</ul>
+<h2 id="配置根目录"><a href="#配置根目录" class="headerlink" title="配置根目录"></a>配置根目录</h2><p>网站根目录 web 服务器上存放网站程序的空间，可通过修改配置文件自定义，如 E:/www<br>步骤如下：</p>
+<ul>
+<li>打开配置文件，控制台选择（或者 wampserver 安装目录下，bin\apache\Apache2.2.21\conf\httpd.conf)</li>
+</ul>
+<p><img src="(http://www.ccyyao.top/images/http c.jpg" alt="配置文件图片">  </p>
+<ul>
+<li><p>设定根目录，查找并修改</p>
+<blockquote>
+<p>DocumentRoot “D:/wamp/www/“</p>
+</blockquote>
+</li>
+<li><p>配置根目录，查找</p>
+<blockquote>
+<p>Directory “D:/wamp/www/“ 修改成 Direcory “E:/www/“</p>
+</blockquote>
+</li>
+<li><p>修改完后，并不能立即生效，需要重启 Apache</p>
+</li>
+</ul>
+<h2 id="网站部署"><a href="#网站部署" class="headerlink" title="网站部署"></a>网站部署</h2><p>我们制作好的网页拷贝到配置好的根目录下，浏览器访问127.0.0.1即可。</p>
+<h2 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h2><p>在一台Web服务器上，我们可以通过配置虚拟主机，然后分别设定根目录，实现对多个网站的管理。<br>步骤如下：</p>
+<ul>
+<li><p>开启虚拟主机辅配置，在 httpd.conf 中找到  （去掉前面的#号注释，开启虚拟主机配置）<br><img src="(http://www.ccyyao.top/images/http d.jpg" alt="开启虚拟主机配置图片">  </p>
+</li>
+<li><p>配置虚拟主机，打开 conf/extra/httpd-vhosts.conf<br><img src="(http://www.ccyyao.top/images/http e.jpg" alt="配置文件图片"> </p>
+</li>
+</ul>
+<p>分别修改一下三项<br><code>DocumentRoot&quot;E:/www/example&quot;</code><br><code>ServerName&quot;example.com&quot;</code><br><code>ServerAlias&quot;www.example.com&quot;</code></p>
+<ul>
+<li>修改 DNS（hosts）文件，打开C：/Windows\System32\drivers\ets\hosts<br><code>目录是固定的</code><br><code>127.0.0.1   example.com</code><br><code>127.0.0.1   www.example.com</code></li>
+<li>重启 Apache</li>
+<li>浏览器访问 www.example.com</li>
+</ul>
+<hr>
+<h1 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h1><p>文件以 .php后缀结尾，所有程序包含在&lt;?php/<strong>这里是代码 </strong>/?&gt;</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>变量以$开头 字母/数字/下划线 不能以数字开头</li>
+<li>大小写敏感（区分大小写）</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li>字符型、整形、浮点型、布尔型、数组、对象、NULL</li>
+<li>单引号&amp;双引号区别</li>
+<li>索引数组、关联数组</li>
+</ul>
+<h2 id="内容输出"><a href="#内容输出" class="headerlink" title="内容输出"></a>内容输出</h2><ul>
+<li>echo：输出简单数据类型，如字符串，数值</li>
+<li>print_r():输出复杂数据类型，如数组</li>
+<li>var_dump():输出详细信息，如对象、数组</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>基本与JavaScript语法</li>
+<li>-号表示字符串拼接，JavaScript中为+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li>与javascript基本法一致</li>
+<li>函数名对大小写不敏感</li>
+</ul>
+<h2 id="分支、循环语句"><a href="#分支、循环语句" class="headerlink" title="分支、循环语句"></a>分支、循环语句</h2><ul>
+<li>与JavaScript基本一致</li>
+<li>foreach()</li>
+</ul>
+<h2 id="文件引入"><a href="#文件引入" class="headerlink" title="文件引入"></a>文件引入</h2><ul>
+<li>include/require</li>
+</ul>
+<h2 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h2><ul>
+<li>表单 name 属性的是用来提供给服务端接收所传递数据而设置的</li>
+<li>表单 action 属性设置接收数据的处理程序</li>
+<li>表单 method 属性设置发送数据的方式</li>
+<li>当上传文件是需要设置 enctype=”multipart/form-data”,且只能post方式</li>
+<li>$_GET 接收 get 传值</li>
+<li>$_POSTa 接收 post 传值</li>
+<li>$_FILES 接收文件上传</li>
+</ul>
+<h2 id="常用-PHP-函数"><a href="#常用-PHP-函数" class="headerlink" title="常用 PHP 函数"></a>常用 PHP 函数</h2><ul>
+<li>in_array() 是否在数组中</li>
+<li>count() 计算数组长度</li>
+<li>array_key_exists() 检测数组中是否存在key</li>
+<li>file_get_contents 读取文件</li>
+</ul>
+<hr>
+<h1 id="网络传输协议"><a href="#网络传输协议" class="headerlink" title="网络传输协议"></a>网络传输协议</h1><p>指服务器和客户端间进行通信时的约束和规范，客户端与服务端的数据交互并不是杂乱无章的，需要遵照（基于）一定的规范进行。</p>
+<h2 id="常见协议"><a href="#常见协议" class="headerlink" title="常见协议"></a>常见协议</h2><ul>
+<li>HTTP、HTTPS 超文本传输协议</li>
+<li>FTP 文件传输协议</li>
+<li>SMTP 简单邮件传输协议</li>
+</ul>
+<h2 id="HTTP-协议"><a href="#HTTP-协议" class="headerlink" title="HTTP 协议"></a>HTTP 协议</h2><ul>
+<li>即超文本传输协议，网站是基于HTTP协议的，例如网站的图片、CSS、JS等都是基于HTTP协议进行传输的。</li>
+<li>HTTP协议是由从客户机到服务器的请求(Request)和从服务器到客户机的响应(Response)进行了约束和规范。</li>
+<li>即HTTP协议主要由请求和响应构成。</li>
+<li><p>常用请求方法 POST、GET、PUT、DELETE</p>
+<ul>
+<li>请求/请求报文<br>请求由客户端发起，其规范格式为：请求行、请求头、请求主体。<br><img src="(http://www.ccyyao.top/images/get.jpg" alt="get图片"> <ul>
+<li>请求行<ul>
+<li>有请求方式、请求URL和协议版本构成</li>
+</ul>
+</li>
+<li>请求头<ul>
+<li>Host:localhost 请求的主机</li>
+<li>Cache-Control：max-age=0 控制缓存</li>
+<li>Accept：<em>/</em> 接受的文档MIME类型</li>
+<li>User-Agent：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;服务器&quot;&gt;&lt;a href=&quot;#服务器&quot; class=&quot;headerlink&quot; title=&quot;服务器&quot;&gt;&lt;/a&gt;服务器&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;能够提供某种服务的机器（计算机）称为服务器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;服务器类型&quot;&gt;&lt;a href=&quot;#服务器类型&quot; class=&quot;headerlink&quot; title=&quot;服务器类型&quot;&gt;&lt;/a&gt;服务器类型&lt;/h2&gt;&lt;p&gt;按照不同的划分标准，服务可划分为以下类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；&lt;/li&gt;
+&lt;li&gt;按操作系统可分为：Linux 服务器、 Windows 服务器等；&lt;/li&gt;
+&lt;li&gt;按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="HTTP-Ajax" scheme="http://www.ccyyao.top/categories/HTTP-Ajax/"/>
+    
+    
+      <category term="服务器" scheme="http://www.ccyyao.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="客户端" scheme="http://www.ccyyao.top/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/"/>
+    
+      <category term="网络基础" scheme="http://www.ccyyao.top/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="搭建 HTTP 服务" scheme="http://www.ccyyao.top/tags/%E6%90%AD%E5%BB%BA-HTTP-%E6%9C%8D%E5%8A%A1/"/>
+    
+      <category term="AJAX 编程" scheme="http://www.ccyyao.top/tags/AJAX-%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="同源与跨域" scheme="http://www.ccyyao.top/tags/%E5%90%8C%E6%BA%90%E4%B8%8E%E8%B7%A8%E5%9F%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript转换方式</title>

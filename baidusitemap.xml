@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html</loc>
+    <lastmod>2017-01-09T12:52:19.246Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP服务和Ajax编程</title>
+        <pubTime>2017-01-09T03:15:08.000Z</pubTime>
+        
+        <tag>服务器</tag>
+         
+        <tag>客户端</tag>
+         
+        <tag>网络基础</tag>
+         
+        <tag>搭建 HTTP 服务</tag>
+         
+        <tag>AJAX 编程</tag>
+         
+        <tag>同源与跨域</tag>
+         
+         
+           
+             
+              <breadCrumb title="HTTP-Ajax" url="http://www.ccyyao.top/categories/HTTP-Ajax/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ccyyao.top/2017/01/03/JavaScript-ZHFF.html</loc>
     <lastmod>2017-01-04T02:25:52.519Z</lastmod>
     <data>

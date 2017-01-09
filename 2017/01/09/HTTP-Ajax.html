@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTTP服务和Ajax编程 | 等待！！！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="服务器
+能够提供某种服务的机器（计算机）称为服务器。
+
+服务器类型按照不同的划分标准，服务可划分为以下类型：
+
+按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；
+按操作系统可分为：Linux 服务器、 Windows 服务器等；
+按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP服务和Ajax编程">
+<meta property="og:url" content="http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html">
+<meta property="og:site_name" content="等待！！！">
+<meta property="og:description" content="服务器
+能够提供某种服务的机器（计算机）称为服务器。
+
+服务器类型按照不同的划分标准，服务可划分为以下类型：
+
+按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；
+按操作系统可分为：Linux 服务器、 Windows 服务器等；
+按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。">
+<meta property="og:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/C S.jpg">
+<meta property="og:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/http a.jpg">
+<meta property="og:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/http b.jpg">
+<meta property="og:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/http c.jpg">
+<meta property="og:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/http d.jpg">
+<meta property="og:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/http e.jpg">
+<meta property="og:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/get.jpg">
+<meta property="og:updated_time" content="2017-01-09T12:52:19.246Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP服务和Ajax编程">
+<meta name="twitter:description" content="服务器
+能够提供某种服务的机器（计算机）称为服务器。
+
+服务器类型按照不同的划分标准，服务可划分为以下类型：
+
+按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；
+按操作系统可分为：Linux 服务器、 Windows 服务器等；
+按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。">
+<meta name="twitter:image" content="http://www.ccyyao.top/(http://www.ccyyao.top/images/C S.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="等待！！！" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+  <script>
+    host3 = window.location.href;
+    chinadomain3 = "http://www.ccyyao.top/";
+
+    if (host3.indexOf(chinadomain3) != -1) {
+
+        (function () {
+            var bp = document.createElement('script');
+            bp.src = '//push.zhanzhang.baidu.com/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+
+    }
+</script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">YY</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/categories">个人日志</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                            <li><a href="/about">关于我哟</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1030706805@qq.com" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yaoyao810810" title="github">github</a>
+                            
+                                <a class="fl rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                                <a class="fl QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1030706805&site=qq&menu=yes" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/2D转换/" style="font-size: 10px;">2D转换</a> <a href="/tags/3D转换/" style="font-size: 10px;">3D转换</a> <a href="/tags/AJAX-编程/" style="font-size: 10px;">AJAX 编程</a> <a href="/tags/DOM节点/" style="font-size: 10px;">DOM节点</a> <a href="/tags/Date对象/" style="font-size: 10px;">Date对象</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hexo主题/" style="font-size: 10px;">Hexo主题</a> <a href="/tags/JS递归/" style="font-size: 10px;">JS递归</a> <a href="/tags/JS闭包/" style="font-size: 10px;">JS闭包</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/class操作/" style="font-size: 10px;">class操作</a> <a href="/tags/css操作/" style="font-size: 10px;">css操作</a> <a href="/tags/fs-未见操作模块/" style="font-size: 10px;">fs 未见操作模块</a> <a href="/tags/html5新增标签/" style="font-size: 10px;">html5新增标签</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/jQueryde的DOM操作/" style="font-size: 10px;">jQueryde的DOM操作</a> <a href="/tags/jQuery事件/" style="font-size: 10px;">jQuery事件</a> <a href="/tags/jQuery介绍/" style="font-size: 10px;">jQuery介绍</a> <a href="/tags/jQuery动画/" style="font-size: 10px;">jQuery动画</a> <a href="/tags/jQuery插件机制/" style="font-size: 10px;">jQuery插件机制</a> <a href="/tags/jQuery操作/" style="font-size: 10px;">jQuery操作</a> <a href="/tags/jQuery概念/" style="font-size: 10px;">jQuery概念</a> <a href="/tags/jQuery补充/" style="font-size: 10px;">jQuery补充</a> <a href="/tags/jQuery详细解释/" style="font-size: 10px;">jQuery详细解释</a> <a href="/tags/jQuery选择器/" style="font-size: 10px;">jQuery选择器</a> <a href="/tags/node是什么/" style="font-size: 10px;">node是什么?</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/seajs-和requirejs区别/" style="font-size: 10px;">seajs 和requirejs区别</a> <a href="/tags/url-模块/" style="font-size: 10px;">url 模块</a> <a href="/tags/严格模式/" style="font-size: 10px;">严格模式</a> <a href="/tags/事件兼容性处理/" style="font-size: 10px;">事件兼容性处理</a> <a href="/tags/伪元素-before-after/" style="font-size: 10px;">伪元素 before after</a> <a href="/tags/位置方法/" style="font-size: 10px;">位置方法</a> <a href="/tags/关于自执行函数/" style="font-size: 10px;">关于自执行函数</a> <a href="/tags/同源与跨域/" style="font-size: 10px;">同源与跨域</a> <a href="/tags/圆角-阴影/" style="font-size: 10px;">圆角 阴影</a> <a href="/tags/字体用法/" style="font-size: 10px;">字体用法</a> <a href="/tags/字符串/" style="font-size: 10px;">字符串</a> <a href="/tags/客户端/" style="font-size: 10px;">客户端</a> <a href="/tags/工具使用/" style="font-size: 10px;">工具使用</a> <a href="/tags/快速开始/" style="font-size: 10px;">快速开始</a> <a href="/tags/搭建-HTTP-服务/" style="font-size: 10px;">搭建 HTTP 服务</a> <a href="/tags/操作方法/" style="font-size: 10px;">操作方法</a> <a href="/tags/新增表单/" style="font-size: 10px;">新增表单</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/模块化的好处/" style="font-size: 10px;">模块化的好处</a> <a href="/tags/模块化规范/" style="font-size: 10px;">模块化规范</a> <a href="/tags/沙箱模式/" style="font-size: 10px;">沙箱模式</a> <a href="/tags/添加视频方式/" style="font-size: 10px;">添加视频方式</a> <a href="/tags/添加音频/" style="font-size: 10px;">添加音频</a> <a href="/tags/渐变/" style="font-size: 10px;">渐变</a> <a href="/tags/环境变量/" style="font-size: 10px;">环境变量</a> <a href="/tags/缓存/" style="font-size: 10px;">缓存</a> <a href="/tags/网络基础/" style="font-size: 10px;">网络基础</a> <a href="/tags/转换方式/" style="font-size: 10px;">转换方式</a> <a href="/tags/边框图片/" style="font-size: 10px;">边框图片</a> <a href="/tags/选择器/" style="font-size: 10px;">选择器</a> <a href="/tags/非模块化的方式/" style="font-size: 10px;">非模块化的方式</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://blog.ihoey.com/">梦魇小栈</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.mcling.xyz/">心    雨</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">YY</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">YY</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/categories">个人日志</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                    <li><a href="/about">关于我哟</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1030706805@qq.com" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yaoyao810810" title="github">github</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                        <a class="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1030706805&site=qq&menu=yes" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-HTTP-Ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/09/HTTP-Ajax.html" class="article-date">
+      <time datetime="2017-01-09T03:15:08.000Z" itemprop="datePublished">2017-01-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTTP服务和Ajax编程
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/HTTP-Ajax/">HTTP-Ajax</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX-编程/">AJAX 编程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/同源与跨域/">同源与跨域</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/客户端/">客户端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建-HTTP-服务/">搭建 HTTP 服务</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络基础/">网络基础</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><blockquote>
+<p>能够提供某种服务的机器（计算机）称为服务器。</p>
+</blockquote>
+<h2 id="服务器类型"><a href="#服务器类型" class="headerlink" title="服务器类型"></a>服务器类型</h2><p>按照不同的划分标准，服务可划分为以下类型：</p>
+<ul>
+<li>按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；</li>
+<li>按操作系统可分为：Linux 服务器、 Windows 服务器等；</li>
+<li>按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。</li>
+</ul>
+<a id="more"></a>
+<h2 id="服务器软件"><a href="#服务器软件" class="headerlink" title="服务器软件"></a>服务器软件</h2><p>使计算机具备提供某种服务能力的应用软件，称为服务器软件，通过安装响应的服务软件，然后进行配置后就可以使计算机具备了提供某种服务的能力。</p>
+<ul>
+<li>常见的服务器软件有：<ul>
+<li>文件服务器：Server-U、FileZilla、VsFTP 等；</li>
+<li>数据库服务器：Oracle、MySQL、PostgreSQL、MSSQL 等；</li>
+<li>邮件服务器：Postfix、Sendmail 等；</li>
+<li>HTTP 服务器：Apache、Nginx、IIS、Tomcat、NodeJS 等；</li>
+</ul>
+</li>
+</ul>
+<h2 id="HTTP-服务器"><a href="#HTTP-服务器" class="headerlink" title="HTTP 服务器"></a>HTTP 服务器</h2><ul>
+<li>即网站服务器，主要提供文档（文本、图片、视频、音频）浏览服务，一般安装 Apache、Nginx 服务器软件。</li>
+<li>HTTP服务器可以结合某一编程语言处理业务逻辑，由此进行的开发，同常称为服务端开发。</li>
+<li>常见的运行在服务端的编程语言包括 PHP、Jsp、Asp、Python、Ruby、Perl 等。</li>
+</ul>
+<hr>
+<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><ul>
+<li>具有向服务器索取服务能力的终端，比如：手机、电脑等，通过安装不同的客户端软件，可以获取不同的服务，比如通过QQ获得即时通讯服务、通过迅雷获得下载服务等。</li>
+<li>常见的客户端软件：浏览器、QQ、迅雷、Foxmail 等。</li>
+<li>以浏览器为宿主环境，结合 HTML、CSS、JavaScript 等技术，而进行的一系列开发，通常称为前端开发。</li>
+</ul>
+<h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="IP-地址"><a href="#IP-地址" class="headerlink" title="IP 地址"></a>IP 地址</h2><p>所谓 IP 地址就是给每个连接在互联网上的主机分配的一个32位地址，（查看本机IP地址：ping、ipconfig、ifconfig）</p>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>由于IP 地址基于数字，不方便记忆，于是便用域名来代替 IP 地址，域名是一个 IP 地址的“面具”（查看域名对应IP地址：ping、tracert）</p>
+<h2 id="DNS-服务"><a href="#DNS-服务" class="headerlink" title="DNS 服务"></a>DNS 服务</h2><p>DNS 记录了IP地址和域名的映射（对应）关系；（查找优先级 本机 hosts文件、DNS 服务器）</p>
+<h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>端口号是计算机与外界通讯交流的出口，每个段都对应不同的服务，现实生活中，银行不同的窗口办理不同的业务，（查看端口占用情况：netstat -an）常见的端口号：80、8080/21/22</p>
+<hr>
+<h1 id="C-S-和-B-S"><a href="#C-S-和-B-S" class="headerlink" title="C/S 和 B/S"></a>C/S 和 B/S</h1><h2 id="C-S-结构"><a href="#C-S-结构" class="headerlink" title="C/S 结构"></a>C/S 结构</h2><p>即 <code>Client</code> <code>Server</code><br><img src="(http://www.ccyyao.top/images/C S.jpg" alt="C/S图片"><br>在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。</p>
+<h2 id="B-S-结构"><a href="#B-S-结构" class="headerlink" title="B/S 结构"></a>B/S 结构</h2><p>B/S（即Broswer、Server）解决了C/S所带来的不便，将所有的服务都可以通过浏览器来完成（因为基本所有浏览器都安装了浏览器），但B/S也有一些不利，比如操作稳定性、流畅度等方面相对较弱。</p>
+<hr>
+<h1 id="搭建-HTTP-服务"><a href="#搭建-HTTP-服务" class="headerlink" title="搭建 HTTP 服务"></a>搭建 HTTP 服务</h1><p>Windows + Apache + Mysql + PHP，首字母组合。</p>
+<h2 id="安装-Wamp-Server"><a href="#安装-Wamp-Server" class="headerlink" title="安装 Wamp Server"></a>安装 Wamp Server</h2><p>安装 wampserver，和普通软件安装无差别，除指定安装路径外，其它默认安装。</p>
+<h2 id="管理-HTTP-服务"><a href="#管理-HTTP-服务" class="headerlink" title="管理 HTTP 服务"></a>管理 HTTP 服务</h2><p>任务图标绿色为正常启动状态<br>通过图形控制台可以启动、重启、停止所有服务  </p>
+<p><img src="(http://www.ccyyao.top/images/http a.jpg" alt="http图片"></p>
+<p>或者单独启动、重启、停止特定服务  </p>
+<p><img src="(http://www.ccyyao.top/images/http b.jpg" alt="http图片">  </p>
+<p>注意事项：</p>
+<ul>
+<li>检查网络是不是通的 ping 对方 IP</li>
+<li>检查防火墙是否开启，如果开启将不能正常被访问</li>
+<li>检查访问权限 Allow from all</li>
+<li>理解默认索引</li>
+<li>确保端口没有被其他程序占用</li>
+<li>“#”表示注释</li>
+<li>修改配置要格外小心，禁止无意修改其他内容</li>
+</ul>
+<h2 id="配置根目录"><a href="#配置根目录" class="headerlink" title="配置根目录"></a>配置根目录</h2><p>网站根目录 web 服务器上存放网站程序的空间，可通过修改配置文件自定义，如 E:/www<br>步骤如下：</p>
+<ul>
+<li>打开配置文件，控制台选择（或者 wampserver 安装目录下，bin\apache\Apache2.2.21\conf\httpd.conf)</li>
+</ul>
+<p><img src="(http://www.ccyyao.top/images/http c.jpg" alt="配置文件图片">  </p>
+<ul>
+<li><p>设定根目录，查找并修改</p>
+<blockquote>
+<p>DocumentRoot “D:/wamp/www/“</p>
+</blockquote>
+</li>
+<li><p>配置根目录，查找</p>
+<blockquote>
+<p>Directory “D:/wamp/www/“ 修改成 Direcory “E:/www/“</p>
+</blockquote>
+</li>
+<li><p>修改完后，并不能立即生效，需要重启 Apache</p>
+</li>
+</ul>
+<h2 id="网站部署"><a href="#网站部署" class="headerlink" title="网站部署"></a>网站部署</h2><p>我们制作好的网页拷贝到配置好的根目录下，浏览器访问127.0.0.1即可。</p>
+<h2 id="配置虚拟主机"><a href="#配置虚拟主机" class="headerlink" title="配置虚拟主机"></a>配置虚拟主机</h2><p>在一台Web服务器上，我们可以通过配置虚拟主机，然后分别设定根目录，实现对多个网站的管理。<br>步骤如下：</p>
+<ul>
+<li><p>开启虚拟主机辅配置，在 httpd.conf 中找到  （去掉前面的#号注释，开启虚拟主机配置）<br><img src="(http://www.ccyyao.top/images/http d.jpg" alt="开启虚拟主机配置图片">  </p>
+</li>
+<li><p>配置虚拟主机，打开 conf/extra/httpd-vhosts.conf<br><img src="(http://www.ccyyao.top/images/http e.jpg" alt="配置文件图片"> </p>
+</li>
+</ul>
+<p>分别修改一下三项<br><code>DocumentRoot&quot;E:/www/example&quot;</code><br><code>ServerName&quot;example.com&quot;</code><br><code>ServerAlias&quot;www.example.com&quot;</code></p>
+<ul>
+<li>修改 DNS（hosts）文件，打开C：/Windows\System32\drivers\ets\hosts<br><code>目录是固定的</code><br><code>127.0.0.1   example.com</code><br><code>127.0.0.1   www.example.com</code></li>
+<li>重启 Apache</li>
+<li>浏览器访问 www.example.com</li>
+</ul>
+<hr>
+<h1 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h1><p>文件以 .php后缀结尾，所有程序包含在&lt;?php/<strong>这里是代码 </strong>/?&gt;</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>变量以$开头 字母/数字/下划线 不能以数字开头</li>
+<li>大小写敏感（区分大小写）</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li>字符型、整形、浮点型、布尔型、数组、对象、NULL</li>
+<li>单引号&amp;双引号区别</li>
+<li>索引数组、关联数组</li>
+</ul>
+<h2 id="内容输出"><a href="#内容输出" class="headerlink" title="内容输出"></a>内容输出</h2><ul>
+<li>echo：输出简单数据类型，如字符串，数值</li>
+<li>print_r():输出复杂数据类型，如数组</li>
+<li>var_dump():输出详细信息，如对象、数组</li>
+</ul>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ul>
+<li>基本与JavaScript语法</li>
+<li>-号表示字符串拼接，JavaScript中为+</li>
+</ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li>与javascript基本法一致</li>
+<li>函数名对大小写不敏感</li>
+</ul>
+<h2 id="分支、循环语句"><a href="#分支、循环语句" class="headerlink" title="分支、循环语句"></a>分支、循环语句</h2><ul>
+<li>与JavaScript基本一致</li>
+<li>foreach()</li>
+</ul>
+<h2 id="文件引入"><a href="#文件引入" class="headerlink" title="文件引入"></a>文件引入</h2><ul>
+<li>include/require</li>
+</ul>
+<h2 id="表单处理"><a href="#表单处理" class="headerlink" title="表单处理"></a>表单处理</h2><ul>
+<li>表单 name 属性的是用来提供给服务端接收所传递数据而设置的</li>
+<li>表单 action 属性设置接收数据的处理程序</li>
+<li>表单 method 属性设置发送数据的方式</li>
+<li>当上传文件是需要设置 enctype=”multipart/form-data”,且只能post方式</li>
+<li>$_GET 接收 get 传值</li>
+<li>$_POSTa 接收 post 传值</li>
+<li>$_FILES 接收文件上传</li>
+</ul>
+<h2 id="常用-PHP-函数"><a href="#常用-PHP-函数" class="headerlink" title="常用 PHP 函数"></a>常用 PHP 函数</h2><ul>
+<li>in_array() 是否在数组中</li>
+<li>count() 计算数组长度</li>
+<li>array_key_exists() 检测数组中是否存在key</li>
+<li>file_get_contents 读取文件</li>
+</ul>
+<hr>
+<h1 id="网络传输协议"><a href="#网络传输协议" class="headerlink" title="网络传输协议"></a>网络传输协议</h1><p>指服务器和客户端间进行通信时的约束和规范，客户端与服务端的数据交互并不是杂乱无章的，需要遵照（基于）一定的规范进行。</p>
+<h2 id="常见协议"><a href="#常见协议" class="headerlink" title="常见协议"></a>常见协议</h2><ul>
+<li>HTTP、HTTPS 超文本传输协议</li>
+<li>FTP 文件传输协议</li>
+<li>SMTP 简单邮件传输协议</li>
+</ul>
+<h2 id="HTTP-协议"><a href="#HTTP-协议" class="headerlink" title="HTTP 协议"></a>HTTP 协议</h2><ul>
+<li>即超文本传输协议，网站是基于HTTP协议的，例如网站的图片、CSS、JS等都是基于HTTP协议进行传输的。</li>
+<li>HTTP协议是由从客户机到服务器的请求(Request)和从服务器到客户机的响应(Response)进行了约束和规范。</li>
+<li>即HTTP协议主要由请求和响应构成。</li>
+<li><p>常用请求方法 POST、GET、PUT、DELETE</p>
+<ul>
+<li>请求/请求报文<br>请求由客户端发起，其规范格式为：请求行、请求头、请求主体。<br><img src="(http://www.ccyyao.top/images/get.jpg" alt="get图片"> <ul>
+<li>请求行<ul>
+<li>有请求方式、请求URL和协议版本构成</li>
+</ul>
+</li>
+<li>请求头<ul>
+<li>Host:localhost 请求的主机</li>
+<li>Cache-Control：max-age=0 控制缓存</li>
+<li>Accept：<em>/</em> 接受的文档MIME类型</li>
+<li>User-Agent：</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/01/09/HTTP-Ajax.html">HTTP服务和Ajax编程</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 YY 的个人博客">YY</a></p>
+        <p><span>发布时间:</span>2017年01月09日 - 11时15分</p>
+        <p><span>最后更新:</span>2017年01月09日 - 20时52分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/09/HTTP-Ajax.html" title="HTTP服务和Ajax编程">http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html　　作者: YY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/03/JavaScript-ZHFF.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript转换方式</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器"><span class="toc-number">1.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器类型"><span class="toc-number">1.1.</span> <span class="toc-text">服务器类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器软件"><span class="toc-number">1.2.</span> <span class="toc-text">服务器软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-服务器"><span class="toc-number">1.3.</span> <span class="toc-text">HTTP 服务器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#客户端"><span class="toc-number">2.</span> <span class="toc-text">客户端</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络基础"><span class="toc-number">3.</span> <span class="toc-text">网络基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP-地址"><span class="toc-number">3.1.</span> <span class="toc-text">IP 地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#域名"><span class="toc-number">3.2.</span> <span class="toc-text">域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DNS-服务"><span class="toc-number">3.3.</span> <span class="toc-text">DNS 服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#端口"><span class="toc-number">3.4.</span> <span class="toc-text">端口</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-S-和-B-S"><span class="toc-number">4.</span> <span class="toc-text">C/S 和 B/S</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-S-结构"><span class="toc-number">4.1.</span> <span class="toc-text">C/S 结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-S-结构"><span class="toc-number">4.2.</span> <span class="toc-text">B/S 结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#搭建-HTTP-服务"><span class="toc-number">5.</span> <span class="toc-text">搭建 HTTP 服务</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装-Wamp-Server"><span class="toc-number">5.1.</span> <span class="toc-text">安装 Wamp Server</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管理-HTTP-服务"><span class="toc-number">5.2.</span> <span class="toc-text">管理 HTTP 服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置根目录"><span class="toc-number">5.3.</span> <span class="toc-text">配置根目录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网站部署"><span class="toc-number">5.4.</span> <span class="toc-text">网站部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置虚拟主机"><span class="toc-number">5.5.</span> <span class="toc-text">配置虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PHP基础"><span class="toc-number">6.</span> <span class="toc-text">PHP基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">6.1.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">6.2.</span> <span class="toc-text">数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内容输出"><span class="toc-number">6.3.</span> <span class="toc-text">内容输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运算符"><span class="toc-number">6.4.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-number">6.5.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支、循环语句"><span class="toc-number">6.6.</span> <span class="toc-text">分支、循环语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件引入"><span class="toc-number">6.7.</span> <span class="toc-text">文件引入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单处理"><span class="toc-number">6.8.</span> <span class="toc-text">表单处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用-PHP-函数"><span class="toc-number">6.9.</span> <span class="toc-text">常用 PHP 函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#网络传输协议"><span class="toc-number">7.</span> <span class="toc-text">网络传输协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常见协议"><span class="toc-number">7.1.</span> <span class="toc-text">常见协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-协议"><span class="toc-number">7.2.</span> <span class="toc-text">HTTP 协议</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/01/09/HTTP-Ajax.html" data-title="HTTP服务和Ajax编程" data-url="http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yyao"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/01/03/JavaScript-ZHFF.html" title="下一篇: JavaScript转换方式">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/09/HTTP-Ajax.html">HTTP服务和Ajax编程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/03/JavaScript-ZHFF.html">JavaScript转换方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/22/H5-CSS3-p3.html">H5+CSS3 2D 3D转换</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/13/H5-CSS3-P2.html">H5+CSS3-P2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/13/nodejs-p2.html">nodejs_p2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/13/nodejs-p1.html">nodejs_p1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/nodejs-p3.html">nodejs_p3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/H5+CSS3-p1.html">H5和CSS3基础语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/01/jQuery-three.html">jQuery 基础课程—jQuery其他必备知识</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/29/jQuery-two.html">jQuery 基础课程—jQuery操作DOM</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/28/jQuery-one.html">jQuery 基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/27/markdown-1.html">Markdown 使用指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/20/javascript-advamud.html">JS高级知识总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/17/about_themes.html">关于主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/hello-world.html">Hello World</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 YY
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >我站访客数量: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
