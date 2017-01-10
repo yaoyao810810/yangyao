@@ -25,14 +25,14 @@
 按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；
 按操作系统可分为：Linux 服务器、 Windows 服务器等；
 按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。">
-<meta property="og:image" content="http://www.ccyyao.top/images/C S.png">
-<meta property="og:image" content="http://www.ccyyao.top/images/http a.png">
-<meta property="og:image" content="http://www.ccyyao.top/images/http b.png">
-<meta property="og:image" content="http://www.ccyyao.top/images/http c.png">
-<meta property="og:image" content="http://www.ccyyao.top/images/http d.png">
-<meta property="og:image" content="http://www.ccyyao.top/images/http e.png">
-<meta property="og:image" content="http://www.ccyyao.top/images/get b.png">
-<meta property="og:updated_time" content="2017-01-10T08:13:34.846Z">
+<meta property="og:image" content="http://www.ccyyao.top/images/C_S.png">
+<meta property="og:image" content="http://www.ccyyao.top/images/http_a.png">
+<meta property="og:image" content="http://www.ccyyao.top/images/http_b.png">
+<meta property="og:image" content="http://www.ccyyao.top/images/http_c.png">
+<meta property="og:image" content="http://www.ccyyao.top/images/http_d.png">
+<meta property="og:image" content="http://www.ccyyao.top/images/http_e.png">
+<meta property="og:image" content="http://www.ccyyao.top/images/get_b.png">
+<meta property="og:updated_time" content="2017-01-10T11:21:45.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP服务和Ajax编程">
 <meta name="twitter:description" content="服务器
@@ -43,7 +43,7 @@
 按服务类型可分为：文件服务器、数据库服务器、邮件服务器、Web 服务器等；
 按操作系统可分为：Linux 服务器、 Windows 服务器等；
 按应用软件可分为：Apache 服务器、Nginx 服务器、IIS 服务器、Tomcat 服务器、Node 服务器等。">
-<meta name="twitter:image" content="http://www.ccyyao.top/images/C S.png">
+<meta name="twitter:image" content="http://www.ccyyao.top/images/C_S.png">
   
     <link rel="alternative" href="/atom.xml" title="等待！！！" type="application/atom+xml">
   
@@ -344,15 +344,17 @@
 <h2 id="DNS-服务"><a href="#DNS-服务" class="headerlink" title="DNS 服务"></a>DNS 服务</h2><p>DNS 记录了IP地址和域名的映射（对应）关系；（查找优先级 本机 hosts文件、DNS 服务器）</p>
 <h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>端口号是计算机与外界通讯交流的出口，每个段都对应不同的服务，现实生活中，银行不同的窗口办理不同的业务，（查看端口占用情况：netstat -an）常见的端口号：80、8080/21/22</p>
 <hr>
-<h1 id="C-S-和-B-S"><a href="#C-S-和-B-S" class="headerlink" title="C/S 和 B/S"></a>C/S 和 B/S</h1><h2 id="C-S-结构"><a href="#C-S-结构" class="headerlink" title="C/S 结构"></a>C/S 结构</h2><p>即 <code>Client</code> <code>Server</code><br><img src="http://www.ccyyao.top/images/C S.png" alt="C/S图片"><br>在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。</p>
+<h1 id="C-S-和-B-S"><a href="#C-S-和-B-S" class="headerlink" title="C/S 和 B/S"></a>C/S 和 B/S</h1><h2 id="C-S-结构"><a href="#C-S-结构" class="headerlink" title="C/S 结构"></a>C/S 结构</h2><p>即 <code>Client</code> <code>Server</code>  </p>
+<p><img src="http://www.ccyyao.top/images/C_S.png" alt="C/S图片">  </p>
+<p>在C/S结构的情况下，不同的服务需要安装不同的客户端软件，比如QQ、迅雷、Foxmail这种情况下安装的软件会越来越多，同时也有许多弊端，比如A出差，需要在B电脑上查收邮件，但是B电脑并未安装Foxmail等类似的客户端软件，这样不得不先去下载Foxmail，非常不方便。</p>
 <h2 id="B-S-结构"><a href="#B-S-结构" class="headerlink" title="B/S 结构"></a>B/S 结构</h2><p>B/S（即Broswer、Server）解决了C/S所带来的不便，将所有的服务都可以通过浏览器来完成（因为基本所有浏览器都安装了浏览器），但B/S也有一些不利，比如操作稳定性、流畅度等方面相对较弱。</p>
 <hr>
 <h1 id="搭建-HTTP-服务"><a href="#搭建-HTTP-服务" class="headerlink" title="搭建 HTTP 服务"></a>搭建 HTTP 服务</h1><p>Windows + Apache + Mysql + PHP，首字母组合。</p>
 <h2 id="安装-Wamp-Server"><a href="#安装-Wamp-Server" class="headerlink" title="安装 Wamp Server"></a>安装 Wamp Server</h2><p>安装 wampserver，和普通软件安装无差别，除指定安装路径外，其它默认安装。</p>
 <h2 id="管理-HTTP-服务"><a href="#管理-HTTP-服务" class="headerlink" title="管理 HTTP 服务"></a>管理 HTTP 服务</h2><p>任务图标绿色为正常启动状态<br>通过图形控制台可以启动、重启、停止所有服务  </p>
-<p><img src="http://www.ccyyao.top/images/http a.png" alt="http图片"></p>
+<p><img src="http://www.ccyyao.top/images/http_a.png" alt="http图片"></p>
 <p>或者单独启动、重启、停止特定服务  </p>
-<p><img src="http://www.ccyyao.top/images/http b.png" alt="http图片">  </p>
+<p><img src="http://www.ccyyao.top/images/http_b.png" alt="http图片">  </p>
 <p>注意事项：</p>
 <ul>
 <li>检查网络是不是通的 ping 对方 IP</li>
@@ -367,7 +369,7 @@
 <ul>
 <li>打开配置文件，控制台选择（或者 wampserver 安装目录下，bin\apache\Apache2.2.21\conf\httpd.conf)</li>
 </ul>
-<p><img src="http://www.ccyyao.top/images/http c.png" alt="配置文件图片">  </p>
+<p><img src="http://www.ccyyao.top/images/http_c.png" alt="配置文件图片">  </p>
 <ul>
 <li><p>设定根目录，查找并修改</p>
 <blockquote>
@@ -387,14 +389,22 @@
 <ul>
 <li>开启虚拟主机辅配置，在 httpd.conf 中找到  （去掉前面的#号注释，开启虚拟主机配置）  </li>
 </ul>
-<p><img src="http://www.ccyyao.top/images/http d.png" alt="开启虚拟主机配置图片">  </p>
+<p><img src="http://www.ccyyao.top/images/http_d.png" alt="开启虚拟主机配置图片">  </p>
 <ul>
 <li>配置虚拟主机，打开 conf/extra/httpd-vhosts.conf  </li>
 </ul>
-<p><img src="http://www.ccyyao.top/images/http e.png" alt="配置文件图片"> </p>
-<p>分别修改一下三项<br><code>DocumentRoot&quot;E:/www/example&quot;</code><br><code>ServerName&quot;example.com&quot;</code><br><code>ServerAlias&quot;www.example.com&quot;</code></p>
+<p><img src="http://www.ccyyao.top/images/http_e.png" alt="配置文件图片"> </p>
+<p>分别修改一下三项</p>
 <ul>
-<li>修改 DNS（hosts）文件，打开C：/Windows\System32\drivers\ets\hosts<br><code>目录是固定的</code><br><code>127.0.0.1   example.com</code><br><code>127.0.0.1   www.example.com</code></li>
+<li><code>DocumentRoot&quot;E:/www/example&quot;</code></li>
+<li><code>ServerName&quot;example.com&quot;</code></li>
+<li><p><code>ServerAlias&quot;www.example.com&quot;</code></p>
+</li>
+<li><p>修改 DNS（hosts）文件，打开C：/Windows\System32\drivers\ets\hosts</p>
+</li>
+<li><code>目录是固定的</code></li>
+<li><code>127.0.0.1   example.com</code></li>
+<li><code>127.0.0.1   www.example.com</code></li>
 <li>重启 Apache</li>
 <li>浏览器访问 www.example.com</li>
 </ul>
@@ -505,15 +515,18 @@
 </ul>
 </li>
 </ul>
-<p><img src="http://www.ccyyao.top/images/get b.png" alt="get b图片"></p>
-<pre><code>        - 常见的状态码有`200`代表`成功`、`304文档未修改、403没有权限、404未找到、500服务器错误`
-- 调试工具
-利用 HTTP 抓包工具在开发中可以帮我们进行调试，常用抓包工具 HttpWatch、Fiddler、Charles、FireBug等。
-    + 浏览器插件
-        - Firebug、HttpWatch、Chrome dev tools
-    + 代理软件
-        - Charles、Fiddler
-</code></pre><h1 id="AJAX-编程"><a href="#AJAX-编程" class="headerlink" title="AJAX 编程"></a>AJAX 编程</h1><p>即 Asynchronous Javascript And XML,AJAX 不是一门新的语言，而是对现有持术的综合利用。本质是在 HTTP 协议的基础上以异步的方式与服务器进行通信。</p>
+<p><img src="http://www.ccyyao.top/images/get_b.png" alt="get b图片">  </p>
+<ul>
+<li>常见的状态码有<code>200</code>代表<code>成功</code>、<code>304文档未修改、403没有权限、404未找到、500服务器错误</code><ul>
+<li>调试工具<br>  +利用 HTTP 抓包工具在开发中可以帮我们进行调试，常用抓包工具 HttpWatch、Fiddler、Charles、FireBug等。<pre><code>+ 浏览器插件
+    - Firebug、HttpWatch、Chrome dev tools
++ 代理软件
+    - Charles、Fiddler
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h1 id="AJAX-编程"><a href="#AJAX-编程" class="headerlink" title="AJAX 编程"></a>AJAX 编程</h1><p>即 Asynchronous Javascript And XML,AJAX 不是一门新的语言，而是对现有持术的综合利用。本质是在 HTTP 协议的基础上以异步的方式与服务器进行通信。</p>
 <h2 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h2><ul>
 <li>指某段程序执行时不会阻塞其它程序执行，其表现形式为程序的执行顺序不依赖程序本身的书写顺序，相反则为同步。</li>
 <li>其优势在于不阻塞程序的执行，从而提升整体执行效率。</li>
@@ -710,7 +723,7 @@
         <p><span>本文标题:</span><a href="/2017/01/09/HTTP-Ajax.html">HTTP服务和Ajax编程</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 YY 的个人博客">YY</a></p>
         <p><span>发布时间:</span>2017年01月09日 - 11时15分</p>
-        <p><span>最后更新:</span>2017年01月10日 - 16时13分</p>
+        <p><span>最后更新:</span>2017年01月10日 - 19时21分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/01/09/HTTP-Ajax.html" title="HTTP服务和Ajax编程">http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html　　作者: YY" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
