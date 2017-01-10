@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.ccyyao.top/"/>
-  <updated>2017-01-10T11:35:53.087Z</updated>
+  <updated>2017-01-10T11:55:39.890Z</updated>
   <id>http://www.ccyyao.top/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html"/>
     <id>http://www.ccyyao.top/2017/01/09/HTTP-Ajax.html</id>
     <published>2017-01-09T03:15:08.000Z</published>
-    <updated>2017-01-10T11:35:53.087Z</updated>
+    <updated>2017-01-10T11:55:39.890Z</updated>
     
     <content type="html"><![CDATA[<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><blockquote>
 <p>能够提供某种服务的机器（计算机）称为服务器。</p>
@@ -83,7 +83,7 @@
 <ul>
 <li>打开配置文件，控制台选择（或者 wampserver 安装目录下，bin\apache\Apache2.2.21\conf\httpd.conf)</li>
 </ul>
-<p><img src="http://www.ccyyao.top/images/http_e.png" alt="配置文件图片">  </p>
+<p><img src="http://www.ccyyao.top/images/http_c.png" alt="配置文件图片">  </p>
 <ul>
 <li><p>设定根目录，查找并修改</p>
 <blockquote>
@@ -107,6 +107,7 @@
 <ul>
 <li>配置虚拟主机，打开 conf/extra/httpd-vhosts.conf  </li>
 </ul>
+<p><img src="http://www.ccyyao.top/images/http_e.png" alt="配置文件图片"></p>
 <ul>
 <li>分别修改一下三项</li>
 <li><code>DocumentRoot&quot;E:/www/example&quot;</code></li>
